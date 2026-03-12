@@ -8,4 +8,5 @@
 - "Tau-Connectome Subtypes and Solanezumab Response in Preclinical Alzheimer's Disease." preserves a public preprint DOI from the CV, but the target venue is not specified in the local sources.
 
 ## Projects
-- All project entries currently have blank figure fields. Representative figures still need to be extracted from local paper PDFs or chosen from existing public assets.
+- No reliable local figure was available for "Bayesian Hypergraph Inference for Latent Disease Pathways." The project remains without a figure because no matching local paper PDF or reusable public figure asset was available.
+- No reliable local figure was available for "GenCPM." The project remains without a figure because no matching local paper PDF or existing public figure asset was available in the repository.
