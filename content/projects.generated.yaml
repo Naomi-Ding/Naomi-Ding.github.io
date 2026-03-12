@@ -21,7 +21,7 @@ projects:
     project_type: "paper"
     featured_on_home: true
     year: 2026
-    sort_order: 2
+    sort_order: 3
     summary: "The COSR model links subcortical shape deformations to functional connectivity while accounting for network modularity, using Bayesian modeling and variational inference."
     related_publication_slug: "connectivity-to-shape-preclinical-alzheimers"
     related_publication_title: "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease."
@@ -37,7 +37,7 @@ projects:
     project_type: "paper"
     featured_on_home: true
     year: 2026
-    sort_order: 3
+    sort_order: 2
     summary: "A multimodal neuroimaging study of structural-functional gradient coupling across development, with links to cognition, mental health, and genetic architecture."
     related_publication_slug: "gradient-coupling-development-behavior-genetics"
     related_publication_title: "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences."
