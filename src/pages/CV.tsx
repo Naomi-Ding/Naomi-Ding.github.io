@@ -1,37 +1,9 @@
-import { useEffect, useMemo, useState } from 'react'
 import { SectionHeader } from '../components/SectionHeader'
-import { profile, withBase } from '../lib/content'
-
-type CvState = 'checking' | 'available' | 'missing'
+import { profile } from '../lib/content'
+import { usePublicCv } from '../hooks/usePublicCv'
 
 export function CV() {
-  const cvUrl = useMemo(() => withBase('cv/cv.public.pdf'), [])
-  const [cvState, setCvState] = useState<CvState>('checking')
-
-  useEffect(() => {
-    let isMounted = true
-
-    async function checkCv() {
-      try {
-        const response = await fetch(cvUrl, {
-          method: 'HEAD',
-          cache: 'no-store'
-        })
-
-        if (!isMounted) return
-        setCvState(response.ok ? 'available' : 'missing')
-      } catch {
-        if (!isMounted) return
-        setCvState('missing')
-      }
-    }
-
-    void checkCv()
-
-    return () => {
-      isMounted = false
-    }
-  }, [cvUrl])
+  const { cvUrl, cvState } = usePublicCv()
 
   return (
     <div className="container page-stack">

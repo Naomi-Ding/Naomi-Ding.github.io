@@ -207,6 +207,20 @@ code {
   color: inherit;
 }
 
+.link-list {
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.link-list li + li {
+  margin-top: 0.45rem;
+}
+
+.education-card .card-body {
+  min-height: 100%;
+}
+
 .page-stack {
   display: flex;
   flex-direction: column;

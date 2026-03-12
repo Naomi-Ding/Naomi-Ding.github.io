@@ -1,5 +1,6 @@
 import { SectionHeader } from '../components/SectionHeader'
 import { profile } from '../lib/content'
+import { usePublicCv } from '../hooks/usePublicCv'
 
 const contactItems = [
   { label: 'Email', value: 'email' as const, kind: 'email' as const },
@@ -11,6 +12,7 @@ const contactItems = [
 ]
 
 export function Contact() {
+  const { cvUrl, hasPublicCv } = usePublicCv()
   const visibleItems = contactItems.filter((item) => Boolean(profile[item.value]))
 
   return (
@@ -30,6 +32,14 @@ export function Contact() {
               <p className="card-text">
                 Use the email address or public profiles below for research-related contact.
               </p>
+
+              {hasPublicCv ? (
+                <div className="button-row">
+                  <a className="button button-secondary" href={cvUrl} target="_blank" rel="noreferrer">
+                    CV
+                  </a>
+                </div>
+              ) : null}
             </div>
           </article>
 
