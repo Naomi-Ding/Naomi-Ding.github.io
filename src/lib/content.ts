@@ -27,18 +27,20 @@ function asStringArray(value: unknown): string[] {
 
 function normalizeProfile(): Profile {
   const parsed = safeLoad<Partial<Profile>>(profileRaw, {})
-
-  const featuredTopics = Array.isArray(parsed.featured_topics)
-    ? parsed.featured_topics
-        .filter(
-          (item): item is { title?: string; description?: string } =>
-            typeof item === 'object' && item !== null
-        )
-        .map((item) => ({
-          title: item.title?.trim() || 'Research area',
-          description: item.description?.trim() || ''
-        }))
+  const rawFeaturedTopics = Array.isArray(parsed.featured_topics)
+    ? (parsed.featured_topics as unknown[])
     : []
+
+  const featuredTopics = rawFeaturedTopics
+    .filter((item) => typeof item === 'object' && item !== null)
+    .map((item) => {
+      const record = item as Record<string, unknown>
+
+      return {
+        title: typeof record.title === 'string' ? record.title.trim() || 'Research area' : 'Research area',
+        description: typeof record.description === 'string' ? record.description.trim() : ''
+      }
+    })
 
   return {
     name: parsed.name?.trim() || 'Shengxian Ding',
