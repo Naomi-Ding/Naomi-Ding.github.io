@@ -1,12 +1,21 @@
 # Missing items
 
 ## Publications
-- "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease." is marked accepted / forthcoming, but no public paper page or public code repository was found during verification on March 12, 2026.
-- "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences." uses a verified public preprint DOI; no public Nature Communications page or official code repository was found during verification on March 12, 2026.
-- Published publications without verified public code links were left blank when no official repository was available from the CV or the allowed verification step: "Bayesian Monotone Single-Index Quantile Regression Model with Bounded Response and Misaligned Functional Covariates.", "Subgroup Mediation Analysis.", "Shape Mediation Analysis in Alzheimer's Disease Studies.", "Confounder Adjustment in Shape-on-Scalar Regression Model: Corpus Callosum Shape Alterations in Alzheimer's Disease.", and "Quantifying the Growth of Glioblastoma Tumors Using Multimodal MRI Brain Images."
-- Under-review or submitted entries without user-provided public links were left blank per policy: "Disentangling Latent Risk Pathways via Bayesian Hypergraph Inference.", "Dynamic Feature Acquisition for Multi-Label Learning.", "A Bayesian Deep Learning Framework for Brain Dynamic Functional Connectivity Linked with Cognition.", and "Shape-based Partially Linear Single-index Cox Model for Alzheimer's Disease Conversion."
-- "Tau-Connectome Subtypes and Solanezumab Response in Preclinical Alzheimer's Disease." preserves a public preprint DOI from the CV, but the target venue is not specified in the local sources.
+- "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease." is display-eligible but no public paper URL was verified on March 12, 2026; the accepted manuscript exists only in `inputs/project_papers/aoas-main.pdf`.
+- "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences." currently uses the verified public preprint DOI; no official journal landing page or public code repository was verified on March 12, 2026.
+- The existing DSQRM code URL was preserved from prior generated content, but an automated verification pass did not confirm a reachable public GitHub repository on March 12, 2026.
+- `graphical_abstract` is intentionally blank for all display-eligible publications until the dedicated generation step is completed.
 
-## Projects
-- No reliable local figure was available for "Bayesian Hypergraph Inference for Latent Disease Pathways." The project remains without a figure because no matching local paper PDF or reusable public figure asset was available.
-- No reliable local figure was available for "GenCPM." The project remains without a figure because no matching local paper PDF or existing public figure asset was available in the repository.
+## Teaching
+- The CV supports the teaching roles and course titles, but it does not provide per-course term assignments or course numbers.
+
+## Professional service
+- Professional memberships listed in the CV were omitted because they are affiliations rather than service roles.
+- Talk and presentation entries are grounded in the CV only; talk titles or session-specific abstracts would need to come from conference programs or departmental pages if a richer display is desired.
+
+## Research and software
+- No committed DSQRM screenshots, GIFs, MP4s, or WebM assets currently exist under `public/`.
+- The CV confirms that DSQRM includes a MATLAB `mlapp` interface, but the public-facing media source still needs to be resolved from the linked repository or exported screenshots.
+
+## Site assets
+- No public CV file is present at `public/cv/cv.public.pdf`.

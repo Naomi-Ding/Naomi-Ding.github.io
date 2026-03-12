@@ -9,6 +9,7 @@ dist/
 Thumbs.db
 .vscode/
 .idea/
+.miktex/
 prompts/
 
 # Private local inputs for Codex only

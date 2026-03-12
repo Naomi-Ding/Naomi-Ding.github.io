@@ -3,6 +3,15 @@ export interface FeaturedTopic {
   description: string
 }
 
+export interface EducationEntry {
+  degree: string
+  field?: string
+  institution: string
+  location?: string
+  period?: string
+  note?: string
+}
+
 export interface Profile {
   name: string
   headline: string
@@ -16,17 +25,23 @@ export interface Profile {
   short_bio?: string
   research_interests: string[]
   featured_topics: FeaturedTopic[]
+  education: EducationEntry[]
 }
 
 export interface Publication {
+  slug: string
   title: string
   authors?: string
   year?: number | string
   venue?: string
   status?: string
+  status_category?: 'published' | 'accepted' | 'forthcoming' | 'in press'
+  authorship_role?: string
   topic?: string
   paper_url?: string
   code_url?: string
+  abstract_text?: string
+  graphical_abstract?: string
   notes?: string
 }
 
@@ -37,7 +52,13 @@ export interface PublicationCollection {
 export interface Project {
   slug: string
   title: string
+  theme?: string
+  authorship_role?: string
+  project_type?: 'paper' | 'project' | 'software'
+  featured_on_home?: boolean
+  sort_order?: number
   summary?: string
+  related_publication_slug?: string
   related_publication_title?: string
   paper_url?: string
   code_url?: string
@@ -48,4 +69,40 @@ export interface Project {
 
 export interface ProjectCollection {
   projects: Project[]
+}
+
+export interface TeachingEntry {
+  role: string
+  course_title: string
+  course_number?: string
+  institution: string
+  term?: string
+  year?: number | string
+  summary?: string
+  materials_url?: string
+}
+
+export interface TeachingCollection {
+  teaching: TeachingEntry[]
+}
+
+export interface ServiceEntry {
+  role: string
+  title: string
+  organization?: string
+  location?: string
+  year?: number | string
+  date?: string
+  summary?: string
+  url?: string
+}
+
+export interface ProfessionalServiceCollection {
+  professional_service: {
+    mentorship?: ServiceEntry[]
+    reviewing?: ServiceEntry[]
+    organizing?: ServiceEntry[]
+    editorial_and_committee?: ServiceEntry[]
+    talks_and_presentations?: ServiceEntry[]
+  }
 }
