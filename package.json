@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:graphical-abstracts": "node ./scripts/generate-graphical-abstracts.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

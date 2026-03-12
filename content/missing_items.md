@@ -4,7 +4,7 @@
 - "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease." is display-eligible but no public paper URL was verified on March 12, 2026; the accepted manuscript exists only in `inputs/project_papers/aoas-main.pdf`.
 - "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences." currently uses the verified public preprint DOI; no official journal landing page or public code repository was verified on March 12, 2026.
 - The existing DSQRM code URL was preserved from prior generated content, but an automated verification pass did not confirm a reachable public GitHub repository on March 12, 2026.
-- `graphical_abstract` is intentionally blank for all display-eligible publications until the dedicated generation step is completed.
+- Graphical abstracts are now generated locally from `content/graphical_abstracts.generated.yaml` via `npm run generate:graphical-abstracts`.
 
 ## Teaching
 - The CV supports the teaching roles and course titles, but it does not provide per-course term assignments or course numbers.

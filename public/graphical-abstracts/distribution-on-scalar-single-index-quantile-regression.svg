@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="distribution-on-scalar-single-index-quantile-regression-title distribution-on-scalar-single-index-quantile-regression-desc">
+  <title id="distribution-on-scalar-single-index-quantile-regression-title">Distribution-on-scalar Single-index Quantile Regression Model for Handling Tumor Heterogeneity.</title>
+  <desc id="distribution-on-scalar-single-index-quantile-regression-desc">Graphical abstract summarizing the problem, method, application, and contribution for Distribution-on-scalar Single-index Quantile Regression Model for Handling Tumor Heterogeneity..</desc>
+  <defs>
+    <linearGradient id="headerGradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00356B" />
+      <stop offset="1" stop-color="#335D8A" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" rx="28" fill="#FFFFFF" />
+  <rect width="1200" height="164" rx="28" fill="url(#headerGradient)" />
+  <rect y="164" width="1200" height="516" rx="0" fill="#FBFCFE" />
+  <style>
+    .kicker { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #D6E3F1; }
+    .title { font: 700 34px 'Iowan Old Style', 'Palatino Linotype', serif; fill: #FFFFFF; }
+    .subtitle { font: 500 16px 'Aptos', 'Segoe UI', sans-serif; fill: #D6E3F1; }
+    .panel-label { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #00356B; }
+    .panel-text { font: 500 22px 'Aptos', 'Segoe UI', sans-serif; fill: #1B2430; }
+    .chip-text { font: 600 16px 'Aptos', 'Segoe UI', sans-serif; fill: #00356B; }
+  </style>
+  <text x="64" y="54" class="kicker">Graphical abstract</text>
+  <text x="64" y="98" class="title"><tspan x="64" dy="0">DSQRM</tspan></text>
+  <text x="64" y="148" class="subtitle"><tspan x="64" dy="0">distributional regression; tumor heterogeneity</tspan></text>
+  
+    <line x1="314" y1="358" x2="350" y2="358" stroke="#7A9ABE" stroke-width="3" stroke-linecap="round" />
+    <line x1="600" y1="358" x2="636" y2="358" stroke="#7A9ABE" stroke-width="3" stroke-linecap="round" />
+    <line x1="886" y1="358" x2="922" y2="358" stroke="#7A9ABE" stroke-width="3" stroke-linecap="round" />
+  
+  
+    <g>
+      <rect x="64" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <text x="88" y="244" class="panel-label">Problem</text>
+      <text x="88" y="282" class="panel-text"><tspan x="88" dy="0">Tumor imaging responses</tspan><tspan x="88" dy="28">can remain heterogeneous</tspan><tspan x="88" dy="28">even after standard</tspan><tspan x="88" dy="28">alignment steps.</tspan></text>
+    </g>
+  
+    <g>
+      <rect x="350" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <text x="374" y="244" class="panel-label">Method</text>
+      <text x="374" y="282" class="panel-text"><tspan x="374" dy="0">Distribution-on-scalar</tspan><tspan x="374" dy="28">single-index quantile</tspan><tspan x="374" dy="28">regression with</tspan><tspan x="374" dy="28">estimation and inference.</tspan></text>
+    </g>
+  
+    <g>
+      <rect x="636" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <text x="660" y="244" class="panel-label">Application</text>
+      <text x="660" y="282" class="panel-text"><tspan x="660" dy="0">TCIA glioblastoma imaging</tspan><tspan x="660" dy="28">with scalar clinical</tspan><tspan x="660" dy="28">covariates.</tspan></text>
+    </g>
+  
+    <g>
+      <rect x="922" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <text x="946" y="244" class="panel-label">Contribution</text>
+      <text x="946" y="282" class="panel-text"><tspan x="946" dy="0">Relates scalar predictors</tspan><tspan x="946" dy="28">to distributional imaging</tspan><tspan x="946" dy="28">outcomes under</tspan><tspan x="946" dy="28">heterogeneity.</tspan></text>
+    </g>
+  
+  
+        <g transform="translate(64, 600)">
+          <rect width="172.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
+          <text x="86.4" y="23" class="chip-text" text-anchor="middle">tumor heterogeneity</text>
+        </g>
+      
+        <g transform="translate(250.8, 600)">
+          <rect width="216" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
+          <text x="108" y="23" class="chip-text" text-anchor="middle">distributional regression</text>
+        </g>
+      
+        <g transform="translate(480.8, 600)">
+          <rect width="100.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
+          <text x="50.4" y="23" class="chip-text" text-anchor="middle">quantiles</text>
+        </g>
+      
+</svg>
