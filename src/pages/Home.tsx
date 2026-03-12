@@ -177,11 +177,7 @@ export function Home() {
       </section>
 
       <section>
-        <SectionHeader
-          eyebrow="Education"
-          title="Education"
-          intro="A concise education summary is kept on the home page rather than split into a separate section of the site."
-        />
+        <SectionHeader eyebrow="Education" title="Education" />
 
         {profile.education.length > 0 ? (
           <div className="grid grid-3">
