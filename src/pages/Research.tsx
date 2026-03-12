@@ -67,7 +67,7 @@ export function Research() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader title="Research projects" />
+      <SectionHeader eyebrow="Research" title="Selected Research Projects" />
 
       <section className="theme-nav-grid">
         {groupedProjects.map((group) => (

@@ -15,7 +15,7 @@ export function Contact() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader eyebrow="Contact" title="Get in touch" />
+      <SectionHeader title="Contact" />
 
       {visibleItems.length > 0 ? (
         <div className="contact-grid">

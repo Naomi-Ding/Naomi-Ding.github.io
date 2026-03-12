@@ -47,3 +47,11 @@ teaching:
     year: 2023
     summary: ""
     materials_url: ""
+  - role: "Research Mentor"
+    course_title: "Graduate student mentoring"
+    course_number: ""
+    institution: "Yale University, Department of Biostatistics"
+    term: ""
+    year: "2024-present"
+    summary: "Mentors graduate students on HPC environments, complex data-analysis pipelines, and manuscript development."
+    materials_url: ""

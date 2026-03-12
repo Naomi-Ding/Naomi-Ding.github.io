@@ -1,13 +1,5 @@
 professional_service:
-  mentorship:
-    - role: "Research Mentor"
-      title: "Graduate student mentoring"
-      organization: "Yale University, Department of Biostatistics"
-      location: "New Haven, CT"
-      year: "2024-present"
-      date: ""
-      summary: "Mentors graduate students on HPC environments, complex data-analysis pipelines, and manuscript development."
-      url: ""
+  mentorship: []
   reviewing:
     - role: "Reviewer"
       title: "Annals of Applied Statistics"

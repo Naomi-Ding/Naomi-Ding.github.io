@@ -127,7 +127,6 @@ export function ProfessionalService() {
   return (
     <div className="container page-stack">
       <SectionHeader
-        eyebrow="Professional Service"
         title="Professional Service"
         intro="Selected reviewing, organizing, mentorship, and invited presentation activities."
       />

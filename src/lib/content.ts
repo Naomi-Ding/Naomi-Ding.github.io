@@ -255,15 +255,40 @@ export function splitKeywords(value?: string): string[] {
 }
 
 export function formatPublicationReference(publication: Pick<Publication, 'authors' | 'year' | 'venue'>): string {
-  const authors = publication.authors?.trim() || ''
-  const year = publication.year ? `(${String(publication.year)}).` : ''
-  const venue = publication.venue?.trim() ? ensureTrailingPeriod(publication.venue.trim()) : ''
+  const { authors, year, venue } = formatPublicationReferenceParts(publication)
 
   return [authors, year, venue].filter(Boolean).join(' ')
 }
 
+export function formatPublicationReferenceParts(
+  publication: Pick<Publication, 'authors' | 'year' | 'venue'>
+) {
+  return {
+    authors: publication.authors?.trim() || '',
+    year: publication.year ? `(${String(publication.year)}).` : '',
+    venue: publication.venue?.trim() ? ensureTrailingPeriod(publication.venue.trim()) : ''
+  }
+}
+
 export function groupPublicationsByYear(items: Publication[]): Record<string, Publication[]> {
-  return items.reduce<Record<string, Publication[]>>((acc, item) => {
+  const sortedItems = items
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => {
+      const yearA = Number.parseInt(String(a.item.year || '0'), 10) || 0
+      const yearB = Number.parseInt(String(b.item.year || '0'), 10) || 0
+      if (yearB !== yearA) return yearB - yearA
+
+      const roleA = a.item.authorship_role?.toLowerCase() || ''
+      const roleB = b.item.authorship_role?.toLowerCase() || ''
+      const priorityA = /first author|co-first author/.test(roleA) ? 0 : 1
+      const priorityB = /first author|co-first author/.test(roleB) ? 0 : 1
+      if (priorityA !== priorityB) return priorityA - priorityB
+
+      return a.index - b.index
+    })
+    .map(({ item }) => item)
+
+  return sortedItems.reduce<Record<string, Publication[]>>((acc, item) => {
     const year = String(item.year || 'Other')
     acc[year] ??= []
     acc[year].push(item)

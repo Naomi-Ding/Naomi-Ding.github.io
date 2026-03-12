@@ -15,6 +15,7 @@ function getTeachingGroups() {
       institution: string
       years: string[]
       courses: string[]
+      summaries: string[]
       materialsUrl?: string
     }
   >()
@@ -26,11 +27,13 @@ function getTeachingGroups() {
       institution: entry.institution,
       years: [],
       courses: [],
+      summaries: [],
       materialsUrl: ''
     }
 
     if (entry.year) current.years.push(String(entry.year))
     if (entry.course_title) current.courses.push(entry.course_title)
+    if (entry.summary) current.summaries.push(entry.summary)
     if (!current.materialsUrl && entry.materials_url) current.materialsUrl = entry.materials_url
 
     grouped.set(key, current)
@@ -40,7 +43,8 @@ function getTeachingGroups() {
     .map((group) => ({
       ...group,
       years: [...new Set(group.years)],
-      courses: [...new Set(group.courses)]
+      courses: [...new Set(group.courses)],
+      summaries: [...new Set(group.summaries)]
     }))
     .sort((a, b) => {
       const lastA = a.years.map((year) => getSortKey(year)).sort((x, y) => y - x)[0] || 0
@@ -54,7 +58,7 @@ export function Teaching() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader eyebrow="Teaching" title="Teaching" />
+      <SectionHeader title="Teaching" intro="Teaching and mentoring." />
 
       {groups.length > 0 ? (
         <div className="grid grid-1">
@@ -68,6 +72,12 @@ export function Teaching() {
                   {metaParts.length > 0 ? (
                     <p className="muted-text teaching-meta">{metaParts.join(' | ')}</p>
                   ) : null}
+
+                  {group.summaries.map((summary) => (
+                    <p key={`${group.role}-${summary}`} className="card-text">
+                      {summary}
+                    </p>
+                  ))}
 
                   {group.courses.length > 0 ? (
                     <ul className="course-list">

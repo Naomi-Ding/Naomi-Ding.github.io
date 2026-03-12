@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
+import { PublicationReference } from '../components/PublicationReference'
 import { SectionHeader } from '../components/SectionHeader'
-import { formatPublicationReference, getPublicationBySlug, splitKeywords, withBase } from '../lib/content'
+import { getPublicationBySlug, splitKeywords, withBase } from '../lib/content'
 
 export function PublicationDetail() {
   const { slug = '' } = useParams()
@@ -29,7 +30,6 @@ export function PublicationDetail() {
     )
   }
 
-  const referenceLine = formatPublicationReference(publication)
   const displayStatus = publication.status_category === 'accepted' ? publication.status : ''
   const keywords = splitKeywords(publication.topic)
 
@@ -39,7 +39,7 @@ export function PublicationDetail() {
 
       <article className="card publication-detail-card">
         <div className="card-body publication-detail-stack">
-          {referenceLine ? <p className="publication-detail-meta">{referenceLine}</p> : null}
+          <PublicationReference publication={publication} className="publication-detail-meta" />
           {displayStatus ? <span className="status-pill">{displayStatus}</span> : null}
 
           {keywords.length > 0 ? (
