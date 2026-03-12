@@ -8,14 +8,17 @@ export function PublicationItem({ publication }: PublicationItemProps) {
   const metaParts = [
     publication.authors,
     publication.venue,
-    publication.year ? String(publication.year) : '',
-    publication.status
+    publication.year ? String(publication.year) : ''
   ].filter(Boolean)
+  const hasLinks = Boolean(publication.paper_url || publication.code_url)
 
   return (
     <article className="card publication-item">
       <div className="card-body">
-        <h3 className="publication-title">{publication.title}</h3>
+        <div className="publication-header">
+          <h3 className="publication-title">{publication.title}</h3>
+          {publication.status ? <span className="status-pill">{publication.status}</span> : null}
+        </div>
 
         {metaParts.length > 0 ? <p className="publication-meta">{metaParts.join(' · ')}</p> : null}
 
@@ -23,29 +26,31 @@ export function PublicationItem({ publication }: PublicationItemProps) {
 
         {publication.notes ? <p className="card-text">{publication.notes}</p> : null}
 
-        <div className="button-row">
-          {publication.paper_url ? (
-            <a
-              className="button button-secondary"
-              href={publication.paper_url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Paper
-            </a>
-          ) : null}
+        {hasLinks ? (
+          <div className="button-row">
+            {publication.paper_url ? (
+              <a
+                className="button button-secondary"
+                href={publication.paper_url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Paper
+              </a>
+            ) : null}
 
-          {publication.code_url ? (
-            <a
-              className="button button-secondary"
-              href={publication.code_url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Code
-            </a>
-          ) : null}
-        </div>
+            {publication.code_url ? (
+              <a
+                className="button button-secondary"
+                href={publication.code_url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code
+              </a>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </article>
   )

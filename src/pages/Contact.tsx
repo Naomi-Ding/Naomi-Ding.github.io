@@ -18,11 +18,21 @@ export function Contact() {
       <SectionHeader
         eyebrow="Contact"
         title="Get in touch"
-        intro="Public contact details and professional profiles."
+        intro="Public contact channels and professional profiles drawn from the generated profile content."
       />
 
       {visibleItems.length > 0 ? (
-        <div className="grid grid-2">
+        <div className="contact-grid">
+          <article className="card">
+            <div className="card-body">
+              <p className="card-kicker">Primary contact</p>
+              <h2 className="card-title">Professional contact details</h2>
+              <p className="card-text">
+                Use the email address or public profiles below for research-related contact.
+              </p>
+            </div>
+          </article>
+
           {visibleItems.map((item) => {
             const value = profile[item.value]
             if (!value) return null
@@ -50,9 +60,7 @@ export function Contact() {
         <article className="card">
           <div className="card-body">
             <h2 className="card-title">No public contact details yet</h2>
-            <p className="card-text">
-              Run the content-generation prompt or fill in the seed file to populate this section.
-            </p>
+            <p className="card-text">Public contact metadata has not been added yet.</p>
           </div>
         </article>
       )}

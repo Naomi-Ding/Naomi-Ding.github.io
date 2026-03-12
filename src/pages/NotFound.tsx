@@ -7,9 +7,9 @@ export function NotFound() {
         <div className="card-body">
           <h1 className="card-title">Page not found</h1>
           <p className="card-text">
-            The page you requested does not exist.
+            The page you requested does not exist or is not part of the public site navigation.
           </p>
-          <Link className="button button-primary" to="/home">
+          <Link className="button button-primary" to="/">
             Return home
           </Link>
         </div>

@@ -23,7 +23,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </figure>
       ) : (
         <div className="project-placeholder" aria-hidden="true">
-          <span>No figure available yet</span>
+          <span>Representative figure unavailable</span>
         </div>
       )}
 
