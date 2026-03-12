@@ -1,0 +1,26 @@
+# Dependencies / build
+node_modules/
+dist/
+.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+prompts/
+
+# Private local inputs for Codex only
+inputs/site_seed.local.yaml
+inputs/raw_cv/
+inputs/project_papers/
+inputs/private_notes/
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# Ignore PDFs by default, then allow only public site CV
+*.pdf
+!public/cv/cv.public.pdf

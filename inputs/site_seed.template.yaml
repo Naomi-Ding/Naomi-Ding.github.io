@@ -1,0 +1,30 @@
+name: "Shengxian Ding"
+email: "[public contact email]"
+github_username: "[your-github-username]"
+github_url: "https://github.com/[your-github-username]"
+google_scholar_url: "[your_google_scholar_url]"
+orcid_url: "[your_orcid_url]"
+linkedin_url: "[your_linkedin_url]"
+department_url: "[your_department_or_lab_url]"
+
+site_title: "Shengxian Ding"
+site_subtitle: "Personal academic website"
+
+design_preferences:
+  style: "professional academic"
+  audience: "postdoc applications"
+  palette:
+    primary: "#00356b"
+    background: "#ffffff"
+    text: "#1f2937"
+
+research_keywords:
+  - "Bayesian statistics"
+  - "neuroimaging"
+  - "disease progression modeling"
+  - "multimodal data integration"
+
+known_name_variants:
+  - "Shengxian Ding"
+
+known_github_orgs: []
