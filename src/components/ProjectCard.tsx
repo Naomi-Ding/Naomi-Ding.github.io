@@ -7,6 +7,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const hasFigure = Boolean(project.figure)
+  const kickerParts = [project.authorship_role, project.project_type === 'software' ? 'Software' : 'Research']
+    .filter(Boolean)
+    .map((part) => String(part))
 
   return (
     <article className="card project-card">
@@ -28,6 +31,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       )}
 
       <div className="card-body">
+        {kickerParts.length > 0 ? <p className="card-kicker">{kickerParts.join(' · ')}</p> : null}
         <h2 className="card-title">{project.title}</h2>
 
         {project.summary ? <p className="card-text">{project.summary}</p> : null}
