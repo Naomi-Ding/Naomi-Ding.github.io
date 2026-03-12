@@ -145,6 +145,7 @@ function normalizeProjects(): Project[] {
     .map((item, index) => ({
       slug: asTrimmedString(item.slug, `project-${index + 1}`),
       title: asTrimmedString(item.title, `Project ${index + 1}`),
+      year: asOptionalNumberOrString(item.year) ?? '',
       theme: asTrimmedString(item.theme),
       authorship_role: asTrimmedString(item.authorship_role),
       project_type:

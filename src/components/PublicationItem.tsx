@@ -12,6 +12,7 @@ export function PublicationItem({
   showAbstractToggle = false
 }: PublicationItemProps) {
   const [isExpanded, setIsExpanded] = useState(false)
+  const displayStatus = publication.status_category === 'accepted' ? publication.status : ''
   const metaParts = [
     publication.authors,
     publication.venue,
@@ -26,10 +27,10 @@ export function PublicationItem({
       <div className="card-body">
         <div className="publication-header">
           <h3 className="publication-title">{publication.title}</h3>
-          {publication.status ? <span className="status-pill">{publication.status}</span> : null}
+          {displayStatus ? <span className="status-pill">{displayStatus}</span> : null}
         </div>
 
-        {metaParts.length > 0 ? <p className="publication-meta">{metaParts.join(' · ')}</p> : null}
+        {metaParts.length > 0 ? <p className="publication-meta">{metaParts.join(' | ')}</p> : null}
 
         {publication.topic ? <p className="tag">{publication.topic}</p> : null}
 

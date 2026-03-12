@@ -4,22 +4,24 @@ projects:
     theme: "Bayesian disease pathways and multimodal risk modeling"
     authorship_role: "first author"
     project_type: "project"
-    featured_on_home: false
-    sort_order: 10
-    summary: "A Bayesian hypergraph framework for identifying latent, risk-factor-modulated disease pathways in large-scale EHR data, paired with structured variational inference for scalable estimation."
+    featured_on_home: true
+    year: 2026
+    sort_order: 1
+    summary: "A Bayesian hypergraph framework for longitudinal EHR that jointly models multiple disease onsets and survival, discovers risk-factor-specific higher-order disease clusters, and scales to large biobank data through structured mean field variational inference."
     related_publication_title: "Disentangling Latent Risk Pathways via Bayesian Hypergraph Inference."
     paper_url: ""
     code_url: ""
-    figure: ""
-    figure_alt: ""
-    figure_caption: ""
+    figure: "figures/bayesian-hypergraph-inference.svg"
+    figure_alt: "Schematic of a Bayesian hypergraph model with a patient data layer, latent disease clusters, and shared effect propagation from covariates to multiple diseases."
+    figure_caption: "Site-adapted overview of the Bayesian hypergraph workflow: patient covariates and disease outcomes feed a latent hypergraph layer, which propagates shared and disease-specific effects with posterior uncertainty."
   - slug: "connectivity-on-shape-regression"
     title: "Connectivity-on-Shape Regression in Preclinical Alzheimer's Disease"
     theme: "Bayesian neuroimaging and preclinical Alzheimer's disease"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
-    sort_order: 1
+    year: 2026
+    sort_order: 2
     summary: "The COSR model links subcortical shape deformations to functional connectivity while accounting for network modularity, using Bayesian modeling and variational inference."
     related_publication_slug: "connectivity-to-shape-preclinical-alzheimers"
     related_publication_title: "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease."
@@ -34,7 +36,8 @@ projects:
     authorship_role: "co-first author"
     project_type: "paper"
     featured_on_home: true
-    sort_order: 2
+    year: 2026
+    sort_order: 3
     summary: "A multimodal neuroimaging study of structural-functional gradient coupling across development, with links to cognition, mental health, and genetic architecture."
     related_publication_slug: "gradient-coupling-development-behavior-genetics"
     related_publication_title: "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences."
@@ -49,12 +52,13 @@ projects:
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
-    sort_order: 4
+    year: 2025
+    sort_order: 5
     summary: "A genome-wide mediation pipeline that combines GWAS screening, brain-shape mediation analysis, and bootstrap inference to study brain subcortical shape mediators."
     related_publication_slug: "s-gmas"
     related_publication_title: "S-GMAS: Genome-Wide Mediation Analysis With Brain Subcortical Shape Mediators."
     paper_url: "http://doi.org/10.1002/hbm.70297"
-    code_url: "http://github.com/Naomi-Ding/S-GMAS"
+    code_url: "https://github.com/Naomi-Ding/S-GMAS"
     figure: "figures/s-gmas.png"
     figure_alt: "Path diagram linking significant SNPs, corpus callosum shape mediators, and neurocognitive outcomes."
     figure_caption: "Functional mediation diagram relating significant SNPs, corpus callosum shape mediators, clinical confounders, and neurocognitive outcomes."
@@ -64,12 +68,13 @@ projects:
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
-    sort_order: 3
+    year: 2025
+    sort_order: 4
     summary: "A Bayesian quantile-regression framework that combines scalar and misaligned functional covariates through a monotone single-index model, with bounded-response estimation and interpretable effects."
     related_publication_slug: "bayesian-monotone-single-index-quantile-regression"
     related_publication_title: "Bayesian Monotone Single-Index Quantile Regression Model with Bounded Response and Misaligned Functional Covariates."
     paper_url: "https://doi.org/10.1093/biomtc/ujaf145"
-    code_url: ""
+    code_url: "https://github.com/Naomi-Ding/BMSQRM"
     figure: "figures/bayesian-single-index-quantile-regression.png"
     figure_alt: "ERP waveform averages for losing and winning door games used in the Bayesian quantile regression study."
     figure_caption: "Averaged ERP waveforms for losing and winning door games, highlighting the reward-positivity interval used in the analysis."
@@ -79,12 +84,13 @@ projects:
     authorship_role: "co-first author"
     project_type: "software"
     featured_on_home: false
-    sort_order: 5
+    year: 2025
+    sort_order: 6
     summary: "A distribution-on-scalar single-index quantile regression framework paired with a MATLAB mlapp workflow for studying heterogeneous imaging responses. The project targets settings where image-derived outcomes remain misaligned after preprocessing and standard scalar summaries lose important distributional information."
     related_publication_slug: "distribution-on-scalar-single-index-quantile-regression"
     related_publication_title: "Distribution-on-scalar Single-index Quantile Regression Model for Handling Tumor Heterogeneity."
     paper_url: "http://doi.org/10.1080/00401706.2024.2441686"
-    code_url: "http://github.com/Naomi-Ding/DSQRM"
+    code_url: "https://github.com/Naomi-Ding/DSQRM"
     figure: ""
     figure_alt: ""
     figure_caption: ""
@@ -94,12 +100,13 @@ projects:
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: false
-    sort_order: 6
+    year: 2024
+    sort_order: 7
     summary: "A single-index function-on-scalar regression framework that adjusts for hidden confounding induced by imaging heterogeneity while preserving nonlinear associations between scalar predictors and functional responses."
     related_publication_slug: "confounder-adjustment-single-index-function-on-scalar-regression"
     related_publication_title: "Confounder adjustment in single index function-on-scalar regression model."
     paper_url: "http://doi.org/10.1214/24-EJS2333"
-    code_url: "http://github.com/Naomi-Ding/SI-FARM"
+    code_url: "https://github.com/Naomi-Ding/SI-FARM"
     figure: ""
     figure_alt: ""
     figure_caption: ""
@@ -109,12 +116,13 @@ projects:
     authorship_role: "collaborative project"
     project_type: "paper"
     featured_on_home: false
-    sort_order: 7
+    year: 2022
+    sort_order: 8
     summary: "LMFE combines pulse detection, multi-scale feature engineering, recurrent neural network representations, and downstream classification to detect partial discharge patterns in three-phase power systems."
     related_publication_slug: "lmfe-partial-discharge-detection"
     related_publication_title: "LMFE: Learning-based Multi-scale Feature Engineering in Partial Discharge Detection."
     paper_url: "http://doi.org/10.1109/TNNLS.2022.3222671"
-    code_url: "http://github.com/Naomi-Ding/LMFE"
+    code_url: "https://github.com/Naomi-Ding/LMFE"
     figure: ""
     figure_alt: ""
     figure_caption: ""

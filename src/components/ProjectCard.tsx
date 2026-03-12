@@ -1,5 +1,5 @@
-import type { Project } from '../types/content'
 import { withBase } from '../lib/content'
+import type { Project } from '../types/content'
 
 interface ProjectCardProps {
   project: Project
@@ -7,9 +7,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const hasFigure = Boolean(project.figure)
-  const kickerParts = [project.authorship_role, project.project_type === 'software' ? 'Software' : 'Research']
-    .filter(Boolean)
-    .map((part) => String(part))
+  const metaParts = [project.year ? String(project.year) : '', project.theme].filter(Boolean)
+  const hasActions = Boolean(project.paper_url || project.code_url)
 
   return (
     <article className="card project-card">
@@ -31,40 +30,40 @@ export function ProjectCard({ project }: ProjectCardProps) {
       )}
 
       <div className="card-body">
-        {kickerParts.length > 0 ? <p className="card-kicker">{kickerParts.join(' · ')}</p> : null}
         <h2 className="card-title">{project.title}</h2>
+        {metaParts.length > 0 ? <p className="muted-text">{metaParts.join(' | ')}</p> : null}
 
         {project.summary ? <p className="card-text">{project.summary}</p> : null}
 
         {project.related_publication_title ? (
-          <p className="muted-text">
-            Related publication: {project.related_publication_title}
-          </p>
+          <p className="muted-text">Related publication: {project.related_publication_title}</p>
         ) : null}
 
-        <div className="button-row">
-          {project.paper_url ? (
-            <a
-              className="button button-secondary"
-              href={project.paper_url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Paper
-            </a>
-          ) : null}
+        {hasActions ? (
+          <div className="button-row">
+            {project.paper_url ? (
+              <a
+                className="button button-secondary"
+                href={project.paper_url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Paper
+              </a>
+            ) : null}
 
-          {project.code_url ? (
-            <a
-              className="button button-secondary"
-              href={project.code_url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Code
-            </a>
-          ) : null}
-        </div>
+            {project.code_url ? (
+              <a
+                className="button button-secondary"
+                href={project.code_url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Code
+              </a>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </article>
   )

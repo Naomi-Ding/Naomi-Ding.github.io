@@ -52,6 +52,7 @@ export interface PublicationCollection {
 export interface Project {
   slug: string
   title: string
+  year?: number | string
   theme?: string
   authorship_role?: string
   project_type?: 'paper' | 'project' | 'software'

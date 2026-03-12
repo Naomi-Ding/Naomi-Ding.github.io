@@ -7,11 +7,7 @@ export function CV() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader
-        eyebrow="Curriculum vitae"
-        title="CV"
-        intro="This page uses only the public CV asset when it exists and otherwise falls back cleanly."
-      />
+      <SectionHeader eyebrow="Curriculum vitae" title="CV" />
 
       {cvState === 'checking' ? (
         <article className="card">

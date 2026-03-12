@@ -9,7 +9,7 @@ professional_service:
       summary: "Mentors graduate students on HPC environments, complex data-analysis pipelines, and manuscript development."
       url: ""
   reviewing:
-    - role: "Ad hoc reviewer"
+    - role: "Reviewer"
       title: "Annals of Applied Statistics"
       organization: "Journal review"
       location: ""
@@ -17,7 +17,7 @@ professional_service:
       date: ""
       summary: ""
       url: ""
-    - role: "Ad hoc reviewer"
+    - role: "Reviewer"
       title: "Biostatistics"
       organization: "Journal review"
       location: ""
@@ -25,7 +25,7 @@ professional_service:
       date: ""
       summary: ""
       url: ""
-    - role: "Ad hoc reviewer"
+    - role: "Reviewer"
       title: "BMC Bioinformatics"
       organization: "Journal review"
       location: ""
@@ -48,7 +48,7 @@ professional_service:
       location: "Indianapolis, IN"
       year: 2026
       date: "March 2026"
-      summary: "Organizer role listed in the CV."
+      summary: ""
       url: ""
   editorial_and_committee: []
   talks_and_presentations:

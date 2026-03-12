@@ -28,7 +28,7 @@ function ServiceSection({
                 <p className="card-kicker">{item.role}</p>
                 <h3 className="card-title">{item.title}</h3>
                 {metaParts.length > 0 ? (
-                  <p className="muted-text service-meta">{metaParts.join(' · ')}</p>
+                  <p className="muted-text service-meta">{metaParts.join(' | ')}</p>
                 ) : null}
                 {item.summary ? <p className="card-text">{item.summary}</p> : null}
                 {item.url ? (
@@ -63,11 +63,7 @@ export function ProfessionalService() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader
-        eyebrow="Professional Service"
-        title="Professional Service"
-        intro="Reviewing, organizing, mentoring, and presentation activity curated conservatively from the current public source materials."
-      />
+      <SectionHeader eyebrow="Professional Service" title="Professional Service" />
 
       {sections.length > 0 ? (
         <div className="stack">

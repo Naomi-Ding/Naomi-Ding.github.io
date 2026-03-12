@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SectionHeader } from '../components/SectionHeader'
-import { profile } from '../lib/content'
 import { usePublicCv } from '../hooks/usePublicCv'
+import { profile } from '../lib/content'
 
 export function Home() {
   const featuredTopics =
@@ -17,7 +17,7 @@ export function Home() {
     { label: 'Google Scholar', href: profile.google_scholar_url },
     { label: 'GitHub', href: profile.github_url },
     { label: 'ORCID', href: profile.orcid_url },
-    { label: 'Department', href: profile.department_url }
+    { label: 'Lab website', href: profile.department_url }
   ].filter((item) => Boolean(item.href))
 
   return (

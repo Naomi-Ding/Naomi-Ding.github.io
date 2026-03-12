@@ -33,21 +33,17 @@ export function PublicationDetail() {
     publication.authors,
     publication.venue,
     publication.year ? String(publication.year) : '',
-    publication.status
+    publication.status_category === 'accepted' ? publication.status : ''
   ].filter(Boolean)
 
   return (
     <div className="container page-stack">
-      <SectionHeader
-        eyebrow="Publication"
-        title={publication.title}
-        intro="Citation metadata, verified links, and supporting public materials for the selected publication."
-      />
+      <SectionHeader eyebrow="Publication" title={publication.title} />
 
       <article className="card publication-detail-card">
         <div className="card-body publication-detail-stack">
           {metaParts.length > 0 ? (
-            <p className="publication-detail-meta">{metaParts.join(' · ')}</p>
+            <p className="publication-detail-meta">{metaParts.join(' | ')}</p>
           ) : null}
 
           {publication.topic ? <p className="tag">{publication.topic}</p> : null}

@@ -1,5 +1,5 @@
-import { SectionHeader } from '../components/SectionHeader'
 import { PublicationItem } from '../components/PublicationItem'
+import { SectionHeader } from '../components/SectionHeader'
 import { groupPublicationsByYear, publications } from '../lib/content'
 
 export function Publications() {
@@ -12,11 +12,7 @@ export function Publications() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader
-        eyebrow="Publications"
-        title="Publications"
-        intro="Display-eligible publications are grouped by year. Each entry links to a dedicated detail page, and abstract previews stay optional so the list remains easy to scan."
-      />
+      <SectionHeader eyebrow="Publications" title="Publications" />
 
       {publications.length > 0 ? (
         years.map((year) => (

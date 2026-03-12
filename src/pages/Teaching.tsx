@@ -7,38 +7,81 @@ function getSortKey(year: number | string | undefined): number {
   return Number.isNaN(parsed) ? 0 : parsed
 }
 
+function getTeachingGroups() {
+  const grouped = new Map<
+    string,
+    {
+      role: string
+      institution: string
+      years: string[]
+      courses: string[]
+      materialsUrl?: string
+    }
+  >()
+
+  teaching.forEach((entry) => {
+    const key = `${entry.role}||${entry.institution}`
+    const current = grouped.get(key) ?? {
+      role: entry.role,
+      institution: entry.institution,
+      years: [],
+      courses: [],
+      materialsUrl: ''
+    }
+
+    if (entry.year) current.years.push(String(entry.year))
+    if (entry.course_title) current.courses.push(entry.course_title)
+    if (!current.materialsUrl && entry.materials_url) current.materialsUrl = entry.materials_url
+
+    grouped.set(key, current)
+  })
+
+  return [...grouped.values()]
+    .map((group) => ({
+      ...group,
+      years: [...new Set(group.years)],
+      courses: [...new Set(group.courses)]
+    }))
+    .sort((a, b) => {
+      const lastA = a.years.map((year) => getSortKey(year)).sort((x, y) => y - x)[0] || 0
+      const lastB = b.years.map((year) => getSortKey(year)).sort((x, y) => y - x)[0] || 0
+      return lastB - lastA
+    })
+}
+
 export function Teaching() {
-  const entries = [...teaching].sort((a, b) => getSortKey(b.year) - getSortKey(a.year))
+  const groups = getTeachingGroups()
 
   return (
     <div className="container page-stack">
-      <SectionHeader
-        eyebrow="Teaching"
-        title="Teaching"
-        intro="Teaching roles are drawn from the current public content files and kept intentionally concise when only CV-level detail is available."
-      />
+      <SectionHeader eyebrow="Teaching" title="Teaching" />
 
-      {entries.length > 0 ? (
+      {groups.length > 0 ? (
         <div className="grid grid-2">
-          {entries.map((entry) => {
-            const metaParts = [entry.role, entry.institution, entry.term, entry.year ? String(entry.year) : '']
-              .filter(Boolean)
+          {groups.map((group) => {
+            const metaParts = [group.institution, group.years.join(', ')].filter(Boolean)
 
             return (
-              <article key={`${entry.role}-${entry.course_title}-${entry.year}`} className="card">
+              <article key={`${group.role}-${group.institution}`} className="card">
                 <div className="card-body">
-                  <p className="card-kicker">{entry.role}</p>
-                  <h2 className="card-title">{entry.course_title}</h2>
+                  <h2 className="card-title">{group.role}</h2>
                   {metaParts.length > 0 ? (
-                    <p className="muted-text teaching-meta">{metaParts.join(' · ')}</p>
+                    <p className="muted-text teaching-meta">{metaParts.join(' | ')}</p>
                   ) : null}
-                  {entry.summary ? <p className="card-text">{entry.summary}</p> : null}
 
-                  {entry.materials_url ? (
+                  {group.courses.length > 0 ? (
+                    <ul className="course-list">
+                      {group.courses.map((course) => (
+                        <li key={`${group.role}-${course}`}>{course}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+
+                  {group.materialsUrl ? (
                     <div className="button-row">
                       <a
                         className="button button-secondary"
-                        href={entry.materials_url}
+                        href={group.materialsUrl}
                         target="_blank"
                         rel="noreferrer"
                       >
