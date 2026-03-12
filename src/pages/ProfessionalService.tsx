@@ -2,6 +2,43 @@ import { SectionHeader } from '../components/SectionHeader'
 import { professionalService } from '../lib/content'
 import type { ServiceEntry } from '../types/content'
 
+function ReviewingSection({ items }: { items: ServiceEntry[] }) {
+  if (items.length === 0) return null
+
+  const peerReviewedJournals = items.filter(
+    (item) => !/conference/i.test(item.organization || '') && !/conference/i.test(item.title)
+  )
+  const conferences = items.filter(
+    (item) => /conference/i.test(item.organization || '') || /conference/i.test(item.title)
+  )
+
+  const groupedItems = [
+    { title: 'Peer-reviewed journals', items: peerReviewedJournals },
+    { title: 'Conferences', items: conferences }
+  ].filter((group) => group.items.length > 0)
+
+  return (
+    <section className="service-section">
+      <h2 className="service-heading">Reviewing</h2>
+      <div className="service-grid">
+        {groupedItems.map((group) => (
+          <article key={group.title} className="card">
+            <div className="card-body">
+              <p className="card-kicker">Peer review</p>
+              <h3 className="card-title">{group.title}</h3>
+              <ul className="service-item-list">
+                {group.items.map((item) => (
+                  <li key={`${group.title}-${item.title}`}>{item.title}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function ServiceSection({
   title,
   items
@@ -55,7 +92,6 @@ function ServiceSection({
 export function ProfessionalService() {
   const sections = [
     { title: 'Mentorship', items: professionalService.mentorship },
-    { title: 'Reviewing', items: professionalService.reviewing },
     { title: 'Organizing / Chairing', items: professionalService.organizing },
     { title: 'Editorial / Committee', items: professionalService.editorial_and_committee },
     { title: 'Selected Talks & Presentations', items: professionalService.talks_and_presentations }
@@ -65,8 +101,9 @@ export function ProfessionalService() {
     <div className="container page-stack">
       <SectionHeader eyebrow="Professional Service" title="Professional Service" />
 
-      {sections.length > 0 ? (
+      {sections.length > 0 || professionalService.reviewing.length > 0 ? (
         <div className="stack">
+          <ReviewingSection items={professionalService.reviewing} />
           {sections.map((section) => (
             <ServiceSection key={section.title} title={section.title} items={section.items} />
           ))}

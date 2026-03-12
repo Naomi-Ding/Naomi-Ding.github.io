@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { SectionHeader } from '../components/SectionHeader'
-import { getPublicationBySlug, withBase } from '../lib/content'
+import { getPublicationBySlug, splitKeywords, withBase } from '../lib/content'
 
 export function PublicationDetail() {
   const { slug = '' } = useParams()
@@ -35,10 +35,11 @@ export function PublicationDetail() {
     publication.year ? String(publication.year) : '',
     publication.status_category === 'accepted' ? publication.status : ''
   ].filter(Boolean)
+  const keywords = splitKeywords(publication.topic)
 
   return (
     <div className="container page-stack">
-      <SectionHeader eyebrow="Publication" title={publication.title} />
+      <SectionHeader title={publication.title} />
 
       <article className="card publication-detail-card">
         <div className="card-body publication-detail-stack">
@@ -46,7 +47,18 @@ export function PublicationDetail() {
             <p className="publication-detail-meta">{metaParts.join(' | ')}</p>
           ) : null}
 
-          {publication.topic ? <p className="tag">{publication.topic}</p> : null}
+          {keywords.length > 0 ? (
+            <div>
+              <p className="card-kicker">Keywords</p>
+              <ul className="tag-list" aria-label="Publication keywords">
+                {keywords.map((keyword) => (
+                  <li key={keyword} className="tag-pill">
+                    {keyword}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           {publication.notes ? <p className="card-text">{publication.notes}</p> : null}
 

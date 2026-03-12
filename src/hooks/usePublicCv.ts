@@ -18,7 +18,13 @@ export function usePublicCv() {
         })
 
         if (!isMounted) return
-        setCvState(response.ok ? 'available' : 'missing')
+        const contentType = response.headers.get('content-type') || ''
+        const isPdf =
+          response.ok &&
+          contentType.toLowerCase().includes('pdf') &&
+          response.url.toLowerCase().includes('cv.public.pdf')
+
+        setCvState(isPdf ? 'available' : 'missing')
       } catch {
         if (!isMounted) return
         setCvState('missing')

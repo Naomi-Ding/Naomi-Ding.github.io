@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="shape-mediation-alzheimers-title shape-mediation-alzheimers-desc">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="shape-mediation-alzheimers-title shape-mediation-alzheimers-desc">
   <title id="shape-mediation-alzheimers-title">Shape Mediation Analysis in Alzheimer&apos;s Disease Studies.</title>
   <desc id="shape-mediation-alzheimers-desc">Graphical abstract summarizing the problem, method, application, and contribution for Shape Mediation Analysis in Alzheimer&apos;s Disease Studies..</desc>
   <defs>
@@ -8,15 +8,15 @@
       <stop offset="1" stop-color="#335D8A" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="680" rx="28" fill="#FFFFFF" />
+  <rect width="1200" height="760" rx="28" fill="#FFFFFF" />
   <rect width="1200" height="164" rx="28" fill="url(#headerGradient)" />
-  <rect y="164" width="1200" height="516" rx="0" fill="#FBFCFE" />
+  <rect y="164" width="1200" height="596" rx="0" fill="#FBFCFE" />
   <style>
     .kicker { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #D6E3F1; }
     .title { font: 700 34px 'Iowan Old Style', 'Palatino Linotype', serif; fill: #FFFFFF; }
     .subtitle { font: 500 16px 'Aptos', 'Segoe UI', sans-serif; fill: #D6E3F1; }
     .panel-label { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #00356B; }
-    .panel-text { font: 500 22px 'Aptos', 'Segoe UI', sans-serif; fill: #1B2430; }
+    .panel-text { font: 500 18px 'Aptos', 'Segoe UI', sans-serif; fill: #1B2430; }
     .chip-text { font: 600 16px 'Aptos', 'Segoe UI', sans-serif; fill: #00356B; }
   </style>
   <text x="64" y="54" class="kicker">Graphical abstract</text>
@@ -29,43 +29,44 @@
   
   
     <g>
-      <rect x="64" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <rect x="64" y="208" width="250" height="340" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
       <text x="88" y="244" class="panel-label">Problem</text>
-      <text x="88" y="282" class="panel-text"><tspan x="88" dy="0">Shape-valued brain</tspan><tspan x="88" dy="28">markers complicate</tspan><tspan x="88" dy="28">mediation analysis in</tspan><tspan x="88" dy="28">Alzheimer&apos;s disease</tspan><tspan x="88" dy="28">studies.</tspan></text>
+      <text x="88" y="282" class="panel-text"><tspan x="88" dy="0">Shape-valued brain</tspan><tspan x="88" dy="24">markers complicate</tspan><tspan x="88" dy="24">mediation analysis in</tspan><tspan x="88" dy="24">Alzheimer&apos;s disease</tspan><tspan x="88" dy="24">studies.</tspan></text>
     </g>
   
     <g>
-      <rect x="350" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <rect x="350" y="208" width="250" height="340" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
       <text x="374" y="244" class="panel-label">Method</text>
-      <text x="374" y="282" class="panel-text"><tspan x="374" dy="0">Elastic shape</tspan><tspan x="374" dy="28">representation with</tspan><tspan x="374" dy="28">direct and indirect</tspan><tspan x="374" dy="28">effect inference.</tspan></text>
+      <text x="374" y="282" class="panel-text"><tspan x="374" dy="0">Elastic shape</tspan><tspan x="374" dy="24">representation with</tspan><tspan x="374" dy="24">direct and indirect</tspan><tspan x="374" dy="24">effect inference.</tspan></text>
     </g>
   
     <g>
-      <rect x="636" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <rect x="636" y="208" width="250" height="340" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
       <text x="660" y="244" class="panel-label">Application</text>
-      <text x="660" y="282" class="panel-text"><tspan x="660" dy="0">Shape-based neuroimaging</tspan><tspan x="660" dy="28">markers in Alzheimer&apos;s</tspan><tspan x="660" dy="28">disease settings.</tspan></text>
+      <text x="660" y="282" class="panel-text"><tspan x="660" dy="0">Shape-based neuroimaging</tspan><tspan x="660" dy="24">markers in Alzheimer&apos;s</tspan><tspan x="660" dy="24">disease settings.</tspan></text>
     </g>
   
     <g>
-      <rect x="922" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <rect x="922" y="208" width="250" height="340" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
       <text x="946" y="244" class="panel-label">Contribution</text>
-      <text x="946" y="282" class="panel-text"><tspan x="946" dy="0">Localizes mediation</tspan><tspan x="946" dy="28">patterns on anatomy</tspan><tspan x="946" dy="28">rather than scalar</tspan><tspan x="946" dy="28">summaries alone.</tspan></text>
+      <text x="946" y="282" class="panel-text"><tspan x="946" dy="0">Localizes mediation</tspan><tspan x="946" dy="24">patterns on anatomy</tspan><tspan x="946" dy="24">rather than scalar</tspan><tspan x="946" dy="24">summaries alone.</tspan></text>
     </g>
   
   
-        <g transform="translate(64, 600)">
+        <g transform="translate(64, 664)">
           <rect width="136.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="68.4" y="23" class="chip-text" text-anchor="middle">shape analysis</text>
         </g>
       
-        <g transform="translate(214.8, 600)">
+        <g transform="translate(214.8, 664)">
           <rect width="100.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="50.4" y="23" class="chip-text" text-anchor="middle">mediation</text>
         </g>
       
-        <g transform="translate(329.6, 600)">
+        <g transform="translate(329.6, 664)">
           <rect width="172.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="86.4" y="23" class="chip-text" text-anchor="middle">Alzheimer&apos;s disease</text>
         </g>
       
 </svg>
+

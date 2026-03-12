@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom'
 import { SectionHeader } from '../components/SectionHeader'
 import { usePublicCv } from '../hooks/usePublicCv'
-import { profile } from '../lib/content'
+import { profile, projects, withBase } from '../lib/content'
+
+function getProjectYear(value: number | string | undefined): number {
+  if (typeof value === 'number') return value
+  const parsed = Number.parseInt(String(value || ''), 10)
+  return Number.isNaN(parsed) ? 0 : parsed
+}
+
+function themeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
 
 export function Home() {
   const featuredTopics =
@@ -9,8 +22,28 @@ export function Home() {
       ? profile.featured_topics
       : profile.research_interests.slice(0, 4).map((interest) => ({
           title: interest,
-          description: ''
+          description: '',
+          image: '',
+          image_alt: ''
         }))
+  const themeCards = featuredTopics.map((topic) => {
+    const representativeProject = [...projects]
+      .filter((project) => project.theme === topic.title && project.figure)
+      .sort((a, b) => {
+        const yearDifference = getProjectYear(b.year) - getProjectYear(a.year)
+        if (yearDifference !== 0) return yearDifference
+        return (a.sort_order || 0) - (b.sort_order || 0)
+      })[0]
+
+    return {
+      ...topic,
+      image: topic.image || representativeProject?.figure || '',
+      image_alt:
+        topic.image_alt ||
+        representativeProject?.figure_alt ||
+        `${topic.title} representative figure`
+    }
+  })
 
   const { cvUrl, hasPublicCv } = usePublicCv()
   const externalLinks = [
@@ -95,16 +128,25 @@ export function Home() {
       </section>
 
       <section>
-        <SectionHeader
-          eyebrow="Research Themes"
-          title="Current areas of emphasis"
-          intro="The home page stays focused on a small set of themes that connect the broader research program."
-        />
+        <SectionHeader title="Research themes" />
 
-        <div className="grid grid-2">
-          {featuredTopics.length > 0 ? (
-            featuredTopics.map((topic) => (
-              <article key={topic.title} className="card">
+        <div className="theme-nav-grid">
+          {themeCards.length > 0 ? (
+            themeCards.map((topic) => (
+              <article key={topic.title} className="card theme-card">
+                {topic.image ? (
+                  <div className="theme-card-media">
+                    <img
+                      src={withBase(topic.image)}
+                      alt={topic.image_alt || `${topic.title} representative figure`}
+                      className="theme-card-image"
+                    />
+                  </div>
+                ) : (
+                  <div className="theme-card-placeholder" aria-hidden="true">
+                    <span>Representative figure unavailable</span>
+                  </div>
+                )}
                 <div className="card-body">
                   <h2 className="card-title">{topic.title}</h2>
                   {topic.description ? (
@@ -112,6 +154,14 @@ export function Home() {
                   ) : (
                     <p className="card-text">This theme is listed in the public profile content.</p>
                   )}
+                  <div className="button-row">
+                    <Link
+                      className="button button-secondary"
+                      to={`/research?theme=${themeSlug(topic.title)}`}
+                    >
+                      View on Research page
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))

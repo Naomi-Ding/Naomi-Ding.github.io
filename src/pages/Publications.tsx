@@ -12,7 +12,8 @@ export function Publications() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader eyebrow="Publications" title="Publications" />
+      <SectionHeader title="Publications" />
+      <p className="section-intro">* denotes equal contribution.</p>
 
       {publications.length > 0 ? (
         years.map((year) => (

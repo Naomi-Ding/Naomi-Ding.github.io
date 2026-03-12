@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bayesian-monotone-single-index-quantile-regression-title bayesian-monotone-single-index-quantile-regression-desc">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bayesian-monotone-single-index-quantile-regression-title bayesian-monotone-single-index-quantile-regression-desc">
   <title id="bayesian-monotone-single-index-quantile-regression-title">Bayesian Monotone Single-Index Quantile Regression Model with Bounded Response and Misaligned Functional Covariates.</title>
   <desc id="bayesian-monotone-single-index-quantile-regression-desc">Graphical abstract summarizing the problem, method, application, and contribution for Bayesian Monotone Single-Index Quantile Regression Model with Bounded Response and Misaligned Functional Covariates..</desc>
   <defs>
@@ -8,15 +8,15 @@
       <stop offset="1" stop-color="#335D8A" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="680" rx="28" fill="#FFFFFF" />
+  <rect width="1200" height="760" rx="28" fill="#FFFFFF" />
   <rect width="1200" height="164" rx="28" fill="url(#headerGradient)" />
-  <rect y="164" width="1200" height="516" rx="0" fill="#FBFCFE" />
+  <rect y="164" width="1200" height="596" rx="0" fill="#FBFCFE" />
   <style>
     .kicker { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; fill: #D6E3F1; }
     .title { font: 700 34px 'Iowan Old Style', 'Palatino Linotype', serif; fill: #FFFFFF; }
     .subtitle { font: 500 16px 'Aptos', 'Segoe UI', sans-serif; fill: #D6E3F1; }
     .panel-label { font: 700 16px 'Aptos', 'Segoe UI', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #00356B; }
-    .panel-text { font: 500 22px 'Aptos', 'Segoe UI', sans-serif; fill: #1B2430; }
+    .panel-text { font: 500 18px 'Aptos', 'Segoe UI', sans-serif; fill: #1B2430; }
     .chip-text { font: 600 16px 'Aptos', 'Segoe UI', sans-serif; fill: #00356B; }
   </style>
   <text x="64" y="54" class="kicker">Graphical abstract</text>
@@ -29,43 +29,44 @@
   
   
     <g>
-      <rect x="64" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <rect x="64" y="208" width="250" height="340" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
       <text x="88" y="244" class="panel-label">Problem</text>
-      <text x="88" y="282" class="panel-text"><tspan x="88" dy="0">Depression-risk studies</tspan><tspan x="88" dy="28">combine scalar predictors</tspan><tspan x="88" dy="28">with misaligned neural</tspan><tspan x="88" dy="28">response curves.</tspan></text>
+      <text x="88" y="282" class="panel-text"><tspan x="88" dy="0">Depression-risk studies</tspan><tspan x="88" dy="24">combine scalar predictors</tspan><tspan x="88" dy="24">with misaligned neural</tspan><tspan x="88" dy="24">response curves.</tspan></text>
     </g>
   
     <g>
-      <rect x="350" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <rect x="350" y="208" width="250" height="340" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
       <text x="374" y="244" class="panel-label">Method</text>
-      <text x="374" y="282" class="panel-text"><tspan x="374" dy="0">Bayesian monotone</tspan><tspan x="374" dy="28">single-index quantile</tspan><tspan x="374" dy="28">regression with joint</tspan><tspan x="374" dy="28">functional registration.</tspan></text>
+      <text x="374" y="282" class="panel-text"><tspan x="374" dy="0">Bayesian monotone</tspan><tspan x="374" dy="24">single-index quantile</tspan><tspan x="374" dy="24">regression with joint</tspan><tspan x="374" dy="24">functional registration.</tspan></text>
     </g>
   
     <g>
-      <rect x="636" y="208" width="250" height="300" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
+      <rect x="636" y="208" width="250" height="340" rx="22" fill="#F4F7FB" stroke="#C9D8E8" />
       <text x="660" y="244" class="panel-label">Application</text>
-      <text x="660" y="282" class="panel-text"><tspan x="660" dy="0">Adolescent depression</tspan><tspan x="660" dy="28">study with scalar and</tspan><tspan x="660" dy="28">reward-processing</tspan><tspan x="660" dy="28">covariates.</tspan></text>
+      <text x="660" y="282" class="panel-text"><tspan x="660" dy="0">Adolescent depression</tspan><tspan x="660" dy="24">study with scalar and</tspan><tspan x="660" dy="24">reward-processing</tspan><tspan x="660" dy="24">covariates.</tspan></text>
     </g>
   
     <g>
-      <rect x="922" y="208" width="250" height="300" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
+      <rect x="922" y="208" width="250" height="340" rx="22" fill="#EDF3F9" stroke="#C9D8E8" />
       <text x="946" y="244" class="panel-label">Contribution</text>
-      <text x="946" y="282" class="panel-text"><tspan x="946" dy="0">Keeps predictions within</tspan><tspan x="946" dy="28">response bounds while</tspan><tspan x="946" dy="28">modeling nonlinear</tspan><tspan x="946" dy="28">combined effects.</tspan></text>
+      <text x="946" y="282" class="panel-text"><tspan x="946" dy="0">Keeps predictions within</tspan><tspan x="946" dy="24">response bounds while</tspan><tspan x="946" dy="24">modeling nonlinear</tspan><tspan x="946" dy="24">combined effects.</tspan></text>
     </g>
   
   
-        <g transform="translate(64, 600)">
+        <g transform="translate(64, 664)">
           <rect width="172.8" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="86.4" y="23" class="chip-text" text-anchor="middle">quantile regression</text>
         </g>
       
-        <g transform="translate(250.8, 600)">
+        <g transform="translate(250.8, 664)">
           <rect width="187.20000000000002" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="93.60000000000001" y="23" class="chip-text" text-anchor="middle">functional covariates</text>
         </g>
       
-        <g transform="translate(452, 600)">
+        <g transform="translate(452, 664)">
           <rect width="158.4" height="36" rx="18" fill="#E9F0F7" stroke="#C9D8E8" />
           <text x="79.2" y="23" class="chip-text" text-anchor="middle">Bayesian modeling</text>
         </g>
       
 </svg>
+

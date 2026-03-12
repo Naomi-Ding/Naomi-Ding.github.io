@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { splitKeywords } from '../lib/content'
 import type { Publication } from '../types/content'
 
 interface PublicationItemProps {
@@ -13,6 +14,7 @@ export function PublicationItem({
 }: PublicationItemProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const displayStatus = publication.status_category === 'accepted' ? publication.status : ''
+  const keywords = splitKeywords(publication.topic)
   const metaParts = [
     publication.authors,
     publication.venue,
@@ -32,7 +34,15 @@ export function PublicationItem({
 
         {metaParts.length > 0 ? <p className="publication-meta">{metaParts.join(' | ')}</p> : null}
 
-        {publication.topic ? <p className="tag">{publication.topic}</p> : null}
+        {keywords.length > 0 ? (
+          <ul className="tag-list" aria-label="Publication keywords">
+            {keywords.map((keyword) => (
+              <li key={keyword} className="tag-pill">
+                {keyword}
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         {publication.notes ? <p className="card-text">{publication.notes}</p> : null}
 

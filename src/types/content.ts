@@ -1,6 +1,8 @@
 export interface FeaturedTopic {
   title: string
   description: string
+  image?: string
+  image_alt?: string
 }
 
 export interface EducationEntry {

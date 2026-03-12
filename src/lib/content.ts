@@ -69,7 +69,9 @@ function normalizeProfile(): Profile {
 
       return {
         title: asTrimmedString(record.title, 'Research area'),
-        description: asTrimmedString(record.description)
+        description: asTrimmedString(record.description),
+        image: asTrimmedString(record.image),
+        image_alt: asTrimmedString(record.image_alt)
       }
     })
 
@@ -236,6 +238,15 @@ export function withBase(path?: string): string {
   const normalizedPath = path.replace(/^\/+/, '')
 
   return `${normalizedBase}${normalizedPath}`
+}
+
+export function splitKeywords(value?: string): string[] {
+  if (!value) return []
+
+  return value
+    .split(';')
+    .map((item) => item.trim())
+    .filter(Boolean)
 }
 
 export function groupPublicationsByYear(items: Publication[]): Record<string, Publication[]> {

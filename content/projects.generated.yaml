@@ -1,7 +1,7 @@
 projects:
   - slug: "bayesian-hypergraph-inference"
     title: "Bayesian Hypergraph Inference for Latent Disease Pathways"
-    theme: "Bayesian disease pathways and multimodal risk modeling"
+    theme: "Bayesian multimorbidity and health data"
     authorship_role: "first author"
     project_type: "project"
     featured_on_home: true
@@ -16,7 +16,7 @@ projects:
     figure_caption: "Site-adapted overview of the Bayesian hypergraph workflow: patient covariates and disease outcomes feed a latent hypergraph layer, which propagates shared and disease-specific effects with posterior uncertainty."
   - slug: "connectivity-on-shape-regression"
     title: "Connectivity-on-Shape Regression in Preclinical Alzheimer's Disease"
-    theme: "Bayesian neuroimaging and preclinical Alzheimer's disease"
+    theme: "Neuroimaging and imaging genetics"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -26,13 +26,13 @@ projects:
     related_publication_slug: "connectivity-to-shape-preclinical-alzheimers"
     related_publication_title: "A Novel Bayesian Framework Uncovering Brain Connectivity-to-Shape Relationship in Preclinical Alzheimer's Disease."
     paper_url: ""
-    code_url: ""
+    code_url: "https://github.com/Naomi-Ding/COSR"
     figure: "figures/connectivity-on-shape-regression.png"
     figure_alt: "Subcortical surfaces, radial distance maps, and connectivity matrices used in the COSR analysis."
     figure_caption: "Extracted subcortical surfaces, radial distance maps, and connectivity matrices from the A4 preclinical Alzheimer's disease analysis."
   - slug: "gradient-coupling"
     title: "Brain Functional-Structural Gradient Coupling"
-    theme: "Bayesian neuroimaging and preclinical Alzheimer's disease"
+    theme: "Neuroimaging and imaging genetics"
     authorship_role: "co-first author"
     project_type: "paper"
     featured_on_home: true
@@ -42,13 +42,13 @@ projects:
     related_publication_slug: "gradient-coupling-development-behavior-genetics"
     related_publication_title: "Brain Functional-Structural Gradient Coupling Reflects Development, Behavior and Genetic Influences."
     paper_url: "https://doi.org/10.1101/2025.09.16.25335918"
-    code_url: ""
+    code_url: "https://github.com/Zhao-team/SF-Gradient-Coupling"
     figure: "figures/gradient-coupling.png"
     figure_alt: "Workflow diagram for constructing structural-functional gradient coupling from diffusion and functional MRI."
     figure_caption: "Overview of structural-functional gradient coupling construction from diffusion MRI, T1-weighted MRI, and resting-state functional MRI."
   - slug: "s-gmas"
     title: "S-GMAS"
-    theme: "Functional, shape, and mediation methods"
+    theme: "Neuroimaging and imaging genetics"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -64,7 +64,7 @@ projects:
     figure_caption: "Functional mediation diagram relating significant SNPs, corpus callosum shape mediators, clinical confounders, and neurocognitive outcomes."
   - slug: "bayesian-single-index-quantile-regression"
     title: "Bayesian Monotone Single-Index Quantile Regression"
-    theme: "Functional, shape, and mediation methods"
+    theme: "Functional and shape modeling"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -80,7 +80,7 @@ projects:
     figure_caption: "Averaged ERP waveforms for losing and winning door games, highlighting the reward-positivity interval used in the analysis."
   - slug: "distribution-on-scalar-single-index-quantile-regression"
     title: "DSQRM for Tumor Heterogeneity"
-    theme: "Functional, shape, and mediation methods"
+    theme: "Functional and shape modeling"
     authorship_role: "co-first author"
     project_type: "software"
     featured_on_home: false
@@ -96,7 +96,7 @@ projects:
     figure_caption: ""
   - slug: "confounder-adjustment-single-index-function-on-scalar"
     title: "Confounder Adjustment in Single Index Function-on-Scalar Regression"
-    theme: "Functional, shape, and mediation methods"
+    theme: "Functional and shape modeling"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: false
@@ -112,7 +112,7 @@ projects:
     figure_caption: ""
   - slug: "lmfe"
     title: "LMFE for Partial Discharge Detection"
-    theme: "Learning systems and applied signal analysis"
+    theme: "Applied machine learning systems"
     authorship_role: "collaborative project"
     project_type: "paper"
     featured_on_home: false
