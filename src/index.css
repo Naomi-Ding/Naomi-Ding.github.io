@@ -438,6 +438,12 @@ code {
     border-color 0.18s ease;
 }
 
+button.button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+}
+
 .button:hover {
   transform: translateY(-1px);
   text-decoration: none;
@@ -456,6 +462,12 @@ code {
   background: white;
   color: var(--color-primary);
   border-color: var(--color-border);
+}
+
+.button-ghost {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border-color: rgba(0, 53, 107, 0.12);
 }
 
 .inline-link {
@@ -502,6 +514,25 @@ code {
   color: var(--color-text-muted);
 }
 
+.publication-preview {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.publication-preview-label {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.publication-preview-text {
+  margin-top: 0.7rem;
+}
+
 .status-pill {
   display: inline-flex;
   flex-shrink: 0;
@@ -528,6 +559,45 @@ code {
   font-size: 1.1rem;
   letter-spacing: 0.03em;
   font-family: var(--font-serif);
+}
+
+.publication-detail-card {
+  overflow: visible;
+}
+
+.publication-detail-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.publication-detail-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.publication-detail-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-detail-abstract {
+  margin-top: 0.4rem;
+  max-width: 78ch;
+}
+
+.publication-graphic {
+  margin: 0.25rem 0 0;
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+}
+
+.publication-graphic img {
+  width: 100%;
+  height: auto;
 }
 
 .project-card {

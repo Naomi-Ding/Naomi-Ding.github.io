@@ -1,16 +1,25 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { Publication } from '../types/content'
 
 interface PublicationItemProps {
   publication: Publication
+  showAbstractToggle?: boolean
 }
 
-export function PublicationItem({ publication }: PublicationItemProps) {
+export function PublicationItem({
+  publication,
+  showAbstractToggle = false
+}: PublicationItemProps) {
+  const [isExpanded, setIsExpanded] = useState(false)
   const metaParts = [
     publication.authors,
     publication.venue,
     publication.year ? String(publication.year) : ''
   ].filter(Boolean)
-  const hasLinks = Boolean(publication.paper_url || publication.code_url)
+  const hasActions = Boolean(
+    publication.paper_url || publication.code_url || publication.slug || publication.abstract_text
+  )
 
   return (
     <article className="card publication-item">
@@ -26,8 +35,23 @@ export function PublicationItem({ publication }: PublicationItemProps) {
 
         {publication.notes ? <p className="card-text">{publication.notes}</p> : null}
 
-        {hasLinks ? (
+        {hasActions ? (
           <div className="button-row">
+            <Link className="button button-secondary" to={`/publications/${publication.slug}`}>
+              Details
+            </Link>
+
+            {showAbstractToggle && publication.abstract_text ? (
+              <button
+                type="button"
+                className="button button-ghost"
+                onClick={() => setIsExpanded((value) => !value)}
+                aria-expanded={isExpanded}
+              >
+                {isExpanded ? 'Hide abstract' : 'Abstract preview'}
+              </button>
+            ) : null}
+
             {publication.paper_url ? (
               <a
                 className="button button-secondary"
@@ -49,6 +73,13 @@ export function PublicationItem({ publication }: PublicationItemProps) {
                 Code
               </a>
             ) : null}
+          </div>
+        ) : null}
+
+        {showAbstractToggle && isExpanded && publication.abstract_text ? (
+          <div className="publication-preview">
+            <p className="publication-preview-label">Abstract preview</p>
+            <p className="card-text publication-preview-text">{publication.abstract_text}</p>
           </div>
         ) : null}
       </div>
