@@ -16,6 +16,7 @@ inputs/site_seed.local.yaml
 inputs/raw_cv/
 inputs/project_papers/
 inputs/private_notes/
+docs/
 
 # Environment files
 .env

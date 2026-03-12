@@ -1,0 +1,22 @@
+Created [MODIFICATION_PLAN.md](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/docs/MODIFICATION_PLAN.md).
+
+The plan keeps the current Vite + React + `HashRouter` + YAML architecture and maps the minimum-change path: remove the CV tab, add `Teaching`, `Professional Service`, and `Publications/:slug`, filter publications to accepted/forthcoming/published only, extend the publication schema for slugs/abstracts/graphical abstracts, and refocus Research by curating `projects.generated.yaml` instead of rebuilding the page model. It also calls out the main content gaps: no structured education in [profile.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/profile.generated.yaml), placeholder [teaching.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/teaching.generated.yaml) and [professional_service.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/professional_service.generated.yaml), and no committed DSQRM media in `public/`. The only DSQRM-related local source I found is the paper reference in [publications.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/publications.generated.yaml) plus `inputs/project_papers/BMSQRM.pdf`.
+
+Recommended files to change next:
+- [src/App.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/App.tsx)
+- [src/components/Layout.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/components/Layout.tsx)
+- [src/lib/content.ts](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/lib/content.ts)
+- [src/types/content.ts](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/types/content.ts)
+- [src/pages/Teaching.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/pages/Teaching.tsx)
+- [src/pages/ProfessionalService.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/pages/ProfessionalService.tsx)
+- [src/pages/PublicationDetail.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/pages/PublicationDetail.tsx)
+- [src/components/PublicationItem.tsx](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/components/PublicationItem.tsx)
+- [content/profile.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/profile.generated.yaml)
+- [content/publications.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/publications.generated.yaml)
+- [content/projects.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/projects.generated.yaml)
+- [content/teaching.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/teaching.generated.yaml)
+- [content/professional_service.generated.yaml](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/professional_service.generated.yaml)
+- [content/missing_items.md](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/content/missing_items.md)
+- [src/index.css](E:/OneDrive%20-%20Yale%20University/AI_tools/Personal_website_v2/src/index.css)
+
+No build was run because I only added the plan document and did not change site code.
