@@ -70,16 +70,6 @@ export function Home() {
             <Link to="/publications" className="button button-secondary">
               View Publications
             </Link>
-            {profile.google_scholar_url ? (
-              <a
-                className="button button-secondary"
-                href={profile.google_scholar_url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar
-              </a>
-            ) : null}
             {hasPublicCv ? (
               <a className="button button-secondary" href={cvUrl} target="_blank" rel="noreferrer">
                 CV
