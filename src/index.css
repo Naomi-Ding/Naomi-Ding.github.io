@@ -644,6 +644,31 @@ button.button {
   gap: 1rem;
 }
 
+.teaching-meta,
+.service-meta {
+  margin-top: 0.5rem;
+}
+
+.service-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-heading {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  font-family: var(--font-serif);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .cv-frame-wrapper {
   border: 1px solid var(--color-border);
   border-radius: 1rem;
@@ -667,7 +692,8 @@ button.button {
   .stats-grid,
   .overview-grid,
   .spotlight-grid,
-  .contact-grid {
+  .contact-grid,
+  .service-grid {
     grid-template-columns: 1fr;
   }
 
