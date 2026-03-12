@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { splitKeywords } from '../lib/content'
+import { formatPublicationReference, splitKeywords } from '../lib/content'
 import type { Publication } from '../types/content'
 
 interface PublicationItemProps {
@@ -15,11 +15,7 @@ export function PublicationItem({
   const [isExpanded, setIsExpanded] = useState(false)
   const displayStatus = publication.status_category === 'accepted' ? publication.status : ''
   const keywords = splitKeywords(publication.topic)
-  const metaParts = [
-    publication.authors,
-    publication.venue,
-    publication.year ? String(publication.year) : ''
-  ].filter(Boolean)
+  const referenceLine = formatPublicationReference(publication)
   const hasActions = Boolean(
     publication.paper_url || publication.code_url || publication.slug || publication.abstract_text
   )
@@ -32,7 +28,7 @@ export function PublicationItem({
           {displayStatus ? <span className="status-pill">{displayStatus}</span> : null}
         </div>
 
-        {metaParts.length > 0 ? <p className="publication-meta">{metaParts.join(' | ')}</p> : null}
+        {referenceLine ? <p className="publication-meta">{referenceLine}</p> : null}
 
         {keywords.length > 0 ? (
           <ul className="tag-list" aria-label="Publication keywords">

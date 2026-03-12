@@ -918,6 +918,26 @@ button.button {
   color: var(--color-text-muted);
 }
 
+.software-panel-figure {
+  margin: 1rem 0 0;
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+}
+
+.software-panel-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.software-panel-caption {
+  padding: 0.8rem 1rem 1rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
 .software-panel-list {
   margin: 0.9rem 0 0;
   padding-left: 1.15rem;

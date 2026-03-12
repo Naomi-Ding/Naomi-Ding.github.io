@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { SectionHeader } from '../components/SectionHeader'
-import { getPublicationBySlug, splitKeywords, withBase } from '../lib/content'
+import { formatPublicationReference, getPublicationBySlug, splitKeywords, withBase } from '../lib/content'
 
 export function PublicationDetail() {
   const { slug = '' } = useParams()
@@ -29,12 +29,8 @@ export function PublicationDetail() {
     )
   }
 
-  const metaParts = [
-    publication.authors,
-    publication.venue,
-    publication.year ? String(publication.year) : '',
-    publication.status_category === 'accepted' ? publication.status : ''
-  ].filter(Boolean)
+  const referenceLine = formatPublicationReference(publication)
+  const displayStatus = publication.status_category === 'accepted' ? publication.status : ''
   const keywords = splitKeywords(publication.topic)
 
   return (
@@ -43,9 +39,8 @@ export function PublicationDetail() {
 
       <article className="card publication-detail-card">
         <div className="card-body publication-detail-stack">
-          {metaParts.length > 0 ? (
-            <p className="publication-detail-meta">{metaParts.join(' | ')}</p>
-          ) : null}
+          {referenceLine ? <p className="publication-detail-meta">{referenceLine}</p> : null}
+          {displayStatus ? <span className="status-pill">{displayStatus}</span> : null}
 
           {keywords.length > 0 ? (
             <div>

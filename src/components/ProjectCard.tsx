@@ -1,4 +1,4 @@
-import { withBase } from '../lib/content'
+import { getPublicationBySlug, withBase } from '../lib/content'
 import type { Project } from '../types/content'
 
 interface ProjectCardProps {
@@ -7,7 +7,14 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const hasFigure = Boolean(project.figure)
-  const metaParts = [project.year ? String(project.year) : '', project.theme].filter(Boolean)
+  const relatedPublication = project.related_publication_slug
+    ? getPublicationBySlug(project.related_publication_slug)
+    : undefined
+  const metaParts = [
+    project.year ? String(project.year) : '',
+    project.theme,
+    relatedPublication?.venue || ''
+  ].filter(Boolean)
   const hasActions = Boolean(project.paper_url || project.code_url)
 
   return (

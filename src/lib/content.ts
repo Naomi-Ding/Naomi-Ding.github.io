@@ -240,6 +240,10 @@ export function withBase(path?: string): string {
   return `${normalizedBase}${normalizedPath}`
 }
 
+function ensureTrailingPeriod(value: string): string {
+  return /[.!?]$/.test(value) ? value : `${value}.`
+}
+
 export function splitKeywords(value?: string): string[] {
   if (!value) return []
 
@@ -247,6 +251,14 @@ export function splitKeywords(value?: string): string[] {
     .split(';')
     .map((item) => item.trim())
     .filter(Boolean)
+}
+
+export function formatPublicationReference(publication: Pick<Publication, 'authors' | 'year' | 'venue'>): string {
+  const authors = publication.authors?.trim() || ''
+  const year = publication.year ? `(${String(publication.year)}).` : ''
+  const venue = publication.venue?.trim() ? ensureTrailingPeriod(publication.venue.trim()) : ''
+
+  return [authors, year, venue].filter(Boolean).join(' ')
 }
 
 export function groupPublicationsByYear(items: Publication[]): Record<string, Publication[]> {

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { withBase } from '../lib/content'
 import type { Project } from '../types/content'
 
 interface ShowcaseStep {
@@ -7,6 +8,9 @@ interface ShowcaseStep {
   title: string
   description: string
   details: string[]
+  image?: string
+  imageAlt?: string
+  imageCaption?: string
 }
 
 interface SoftwareShowcaseProps {
@@ -40,8 +44,8 @@ export function SoftwareShowcase({ project, steps }: SoftwareShowcaseProps) {
               few scalar features when the full response distribution carries the relevant signal.
             </p>
             <p className="software-fact">
-              <strong>What this viewer shows:</strong> Verified workflow stages described in the paper
-              and CV. No public interface screenshots were recoverable during this pass.
+              <strong>What this viewer shows:</strong> The statistical workflow together with the
+              standalone MATLAB interface used to package the method for applied use.
             </p>
           </div>
 
@@ -98,6 +102,20 @@ export function SoftwareShowcase({ project, steps }: SoftwareShowcaseProps) {
                 <p className="software-panel-label">{activeStep.label}</p>
                 <h3 className="software-panel-title">{activeStep.title}</h3>
                 <p className="software-panel-text">{activeStep.description}</p>
+                {activeStep.image ? (
+                  <figure className="software-panel-figure">
+                    <img
+                      src={withBase(activeStep.image)}
+                      alt={activeStep.imageAlt || activeStep.title}
+                      className="software-panel-image"
+                    />
+                    {activeStep.imageCaption ? (
+                      <figcaption className="software-panel-caption">
+                        {activeStep.imageCaption}
+                      </figcaption>
+                    ) : null}
+                  </figure>
+                ) : null}
                 <ul className="software-panel-list">
                   {activeStep.details.map((detail) => (
                     <li key={detail}>{detail}</li>
