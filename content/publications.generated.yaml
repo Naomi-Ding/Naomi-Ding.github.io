@@ -162,7 +162,7 @@ publications:
     status_category: "published"
     authorship_role: "co-author"
     topic: "Machine Learning; Feature Engineering; Fault Detection"
-    paper_url: "http://doi.org/10.1109/TNNLS.2022.3222671"
+    paper_url: "https://ieeexplore.ieee.org/document/9967788/"
     code_url: "https://github.com/Naomi-Ding/LMFE"
     abstract_text: "Develops the Learning-based Multi-scale Feature Engineering (LMFE) framework for partial discharge detection in three-phase power systems. The pipeline combines pulse identification, multi-scale feature extraction, recurrent neural representations, and downstream classification, and achieves strong performance on the VSB ENET benchmark."
     graphical_abstract: "graphical-abstracts/lmfe-partial-discharge-detection.svg"

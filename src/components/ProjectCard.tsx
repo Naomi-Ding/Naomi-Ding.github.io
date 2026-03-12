@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { getPublicationBySlug, withBase } from '../lib/content'
 import type { Project } from '../types/content'
 
@@ -12,10 +13,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
     : undefined
   const metaParts = [
     project.year ? String(project.year) : '',
-    project.theme,
     relatedPublication?.venue || ''
   ].filter(Boolean)
-  const hasActions = Boolean(project.paper_url || project.code_url)
+  const hasActions = Boolean(project.related_publication_slug || project.paper_url || project.code_url)
 
   return (
     <article className="card project-card">
@@ -42,12 +42,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {project.summary ? <p className="card-text">{project.summary}</p> : null}
 
-        {project.related_publication_title ? (
-          <p className="muted-text">Related publication: {project.related_publication_title}</p>
-        ) : null}
-
         {hasActions ? (
           <div className="button-row">
+            {project.related_publication_slug ? (
+              <Link
+                className="button button-secondary"
+                to={`/publications/${project.related_publication_slug}`}
+              >
+                Publication
+              </Link>
+            ) : null}
+
             {project.paper_url ? (
               <a
                 className="button button-secondary"

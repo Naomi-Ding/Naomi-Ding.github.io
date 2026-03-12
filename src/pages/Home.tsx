@@ -47,6 +47,7 @@ export function Home() {
 
   const { cvUrl, hasPublicCv } = usePublicCv()
   const externalLinks = [
+    { label: 'Email', href: profile.email ? `mailto:${profile.email}` : '', external: false },
     { label: 'Google Scholar', href: profile.google_scholar_url },
     { label: 'GitHub', href: profile.github_url },
     { label: 'ORCID', href: profile.orcid_url },
@@ -115,7 +116,11 @@ export function Home() {
                 <ul className="link-list">
                   {externalLinks.map((item) => (
                     <li key={item.label}>
-                      <a href={item.href} target="_blank" rel="noreferrer">
+                      <a
+                        href={item.href}
+                        target={item.external === false ? undefined : '_blank'}
+                        rel={item.external === false ? undefined : 'noreferrer'}
+                      >
                         {item.label}
                       </a>
                     </li>

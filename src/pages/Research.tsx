@@ -26,28 +26,12 @@ export function Research() {
   )
   const dsqrmShowcaseSteps = [
     {
-      label: 'Model',
-      title: 'Distributional regression workflow',
-      description:
-        'DSQRM models heterogeneous imaging outcomes without collapsing them into a few scalar summaries or assuming full alignment after preprocessing.',
-      details: [
-        'Uses a distribution-on-scalar single-index quantile regression formulation.',
-        'Targets tumor-imaging settings where heterogeneity remains scientifically meaningful.',
-        'Connects the statistical model directly to the published Technometrics paper.'
-      ],
-      image: 'figures/DSQRM.png',
-      imageAlt: 'Representative DSQRM model figure.',
-      imageCaption: 'Model overview for distribution-on-scalar single-index quantile regression.'
-    },
-    {
       label: 'Software',
       title: 'Standalone MATLAB application',
-      description:
-        'The DSQRM workflow is also packaged as a standalone MATLAB application so the method can be run through a graphical interface rather than code-only scripts.',
       details: [
-        'Provides a user-facing interface for configuring and launching the analysis workflow.',
-        'Supports method dissemination beyond script-based research prototypes.',
-        'Distributed alongside the public GitHub repository for the software.'
+        'Configure inputs and analysis options from a user-facing interface.',
+        'Run the workflow without editing scripts directly.',
+        'Distributed through the public DSQRM software repository.'
       ],
       image: 'figures/DSQRM_interface0.png',
       imageAlt: 'Screenshot of the DSQRM standalone MATLAB software interface.',
@@ -83,7 +67,7 @@ export function Research() {
 
   return (
     <div className="container page-stack">
-      <SectionHeader title="Research program" />
+      <SectionHeader title="Research projects" />
 
       <section className="theme-nav-grid">
         {groupedProjects.map((group) => (
@@ -110,13 +94,37 @@ export function Research() {
               <p className="research-domain-intro">{group.description}</p>
             </div>
 
-            <div className="stack">
+          <div className="stack">
               {group.projects.map((project) => (
                 <Fragment key={project.slug}>
                   <ProjectCard project={project} />
                   {project.slug === 'distribution-on-scalar-single-index-quantile-regression' &&
                   dsqrmProject ? (
-                    <SoftwareShowcase project={dsqrmProject} steps={dsqrmShowcaseSteps} />
+                    <SoftwareShowcase
+                      project={dsqrmProject}
+                      kicker="Standalone software"
+                      title="DSQRM software interface"
+                      summary="A standalone MATLAB application that packages the DSQRM workflow for collaboration, demonstration, and applied use."
+                      facts={[
+                        {
+                          label: 'Overview',
+                          text: 'Packages DSQRM in a graphical interface for setup, execution, and software distribution.'
+                        },
+                        {
+                          label: 'Users',
+                          text: 'Built for collaborators and applied researchers working with heterogeneous imaging responses.'
+                        },
+                        {
+                          label: 'Value',
+                          text: 'Makes the method easier to share and run beyond a code-only research prototype.'
+                        }
+                      ]}
+                      publicationLabel="Publication"
+                      codeLabel="GitHub"
+                      codeUrl="https://github.com/Naomi-Ding/DSQRM/blob/main/Software_DSQRM/README_DSQRM_software.md"
+                      showPaper={false}
+                      steps={dsqrmShowcaseSteps}
+                    />
                   ) : null}
                 </Fragment>
               ))}

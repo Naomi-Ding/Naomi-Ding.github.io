@@ -57,7 +57,7 @@ export function Teaching() {
       <SectionHeader eyebrow="Teaching" title="Teaching" />
 
       {groups.length > 0 ? (
-        <div className="grid grid-2">
+        <div className="grid grid-1">
           {groups.map((group) => {
             const metaParts = [group.institution, group.years.join(', ')].filter(Boolean)
 

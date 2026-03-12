@@ -86,7 +86,7 @@ projects:
     featured_on_home: false
     year: 2025
     sort_order: 6
-    summary: "A distribution-on-scalar single-index quantile regression framework paired with a MATLAB mlapp workflow for studying heterogeneous imaging responses. The project targets settings where image-derived outcomes remain misaligned after preprocessing and standard scalar summaries lose important distributional information."
+    summary: "A distribution-on-scalar single-index quantile regression framework for heterogeneous imaging responses when full alignment is unrealistic and scalar summaries lose important distributional structure."
     related_publication_slug: "distribution-on-scalar-single-index-quantile-regression"
     related_publication_title: "Distribution-on-scalar Single-index Quantile Regression Model for Handling Tumor Heterogeneity."
     paper_url: "http://doi.org/10.1080/00401706.2024.2441686"
@@ -121,7 +121,7 @@ projects:
     summary: "LMFE combines pulse detection, multi-scale feature engineering, recurrent neural network representations, and downstream classification to detect partial discharge patterns in three-phase power systems."
     related_publication_slug: "lmfe-partial-discharge-detection"
     related_publication_title: "LMFE: Learning-based Multi-scale Feature Engineering in Partial Discharge Detection."
-    paper_url: "http://doi.org/10.1109/TNNLS.2022.3222671"
+    paper_url: "https://ieeexplore.ieee.org/document/9967788/"
     code_url: "https://github.com/Naomi-Ding/LMFE"
     figure: "figures/LMFE.png"
     figure_alt: "Representative figure for the LMFE pipeline in partial discharge detection."
