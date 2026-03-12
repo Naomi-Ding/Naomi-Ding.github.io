@@ -82,7 +82,8 @@ export function Home() {
           <div className="card-body stack">
             <div>
               <p className="card-kicker">Current appointment</p>
-              <h2 className="card-title">{profile.headline}</h2>
+              <h2 className="card-title">Department of Biostatistics, Yale University</h2>
+              <p className="muted-text">Postdoctoral Associate since July 2024</p>
               {profile.location ? <p className="muted-text">Based in {profile.location}</p> : null}
             </div>
 
@@ -167,7 +168,7 @@ export function Home() {
       </section>
 
       <section>
-        <SectionHeader eyebrow="Education" title="Education" />
+        <SectionHeader title="Education" />
 
         {profile.education.length > 0 ? (
           <div className="grid grid-3">
@@ -177,12 +178,12 @@ export function Home() {
                 className="card education-card"
               >
                 <div className="card-body">
-                  <p className="card-kicker">{entry.degree}</p>
-                  <h2 className="card-title">{entry.field || entry.degree}</h2>
-                  <p className="muted-text">{entry.institution}</p>
-                  {entry.location ? <p className="muted-text">{entry.location}</p> : null}
-                  {entry.period ? <p className="card-text">{entry.period}</p> : null}
-                  {entry.note ? <p className="card-text">{entry.note}</p> : null}
+                  <p className="card-kicker education-degree">{entry.degree}</p>
+                  <h2 className="card-title education-title">{entry.field || entry.degree}</h2>
+                  <p className="education-institution">{entry.institution}</p>
+                  {entry.location ? <p className="muted-text education-location">{entry.location}</p> : null}
+                  {entry.period ? <p className="education-period">{entry.period}</p> : null}
+                  {entry.note ? <p className="card-text education-note">{entry.note}</p> : null}
                 </div>
               </article>
             ))}
