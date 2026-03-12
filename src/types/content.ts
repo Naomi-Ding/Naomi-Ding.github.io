@@ -19,6 +19,7 @@ export interface Profile {
   headline: string
   location?: string
   email?: string
+  website_url?: string
   github_url?: string
   google_scholar_url?: string
   orcid_url?: string

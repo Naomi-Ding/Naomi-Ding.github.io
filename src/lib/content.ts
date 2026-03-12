@@ -86,6 +86,7 @@ function normalizeProfile(): Profile {
     headline: asTrimmedString(parsed.headline, 'Academic website in preparation'),
     location: asTrimmedString(parsed.location),
     email: asTrimmedString(parsed.email),
+    website_url: asTrimmedString(parsed.website_url),
     github_url: asTrimmedString(parsed.github_url),
     google_scholar_url: asTrimmedString(parsed.google_scholar_url),
     orcid_url: asTrimmedString(parsed.orcid_url),

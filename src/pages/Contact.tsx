@@ -3,7 +3,7 @@ import { profile } from '../lib/content'
 
 const contactItems = [
   { label: 'Email', value: 'email' as const, kind: 'email' as const },
-  { label: 'GitHub', value: 'github_url' as const, kind: 'link' as const },
+  { label: 'Personal website', value: 'website_url' as const, kind: 'link' as const },
   { label: 'Google Scholar', value: 'google_scholar_url' as const, kind: 'link' as const },
   { label: 'ORCID', value: 'orcid_url' as const, kind: 'link' as const },
   { label: 'LinkedIn', value: 'linkedin_url' as const, kind: 'link' as const },
