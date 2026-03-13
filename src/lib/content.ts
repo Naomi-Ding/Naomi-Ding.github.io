@@ -83,6 +83,7 @@ function normalizeProfile(): Profile {
 
   return {
     name: asTrimmedString(parsed.name, 'Shengxian Ding'),
+    alternate_names: asStringArray(parsed.alternate_names),
     headline: asTrimmedString(parsed.headline, 'Academic website in preparation'),
     location: asTrimmedString(parsed.location),
     email: asTrimmedString(parsed.email),

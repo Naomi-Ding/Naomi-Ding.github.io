@@ -16,6 +16,7 @@ export interface EducationEntry {
 
 export interface Profile {
   name: string
+  alternate_names?: string[]
   headline: string
   location?: string
   email?: string
