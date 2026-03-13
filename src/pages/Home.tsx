@@ -57,7 +57,7 @@ export function Home() {
     <div className="container page-stack">
       <section className="hero">
         <div className="hero-copy">
-          <p className="section-eyebrow">Biostatistics, Bayesian methods, and biomedical data</p>
+          <p className="section-eyebrow">Probabilistic modeling, Bayesian computation, and complex biomedical data</p>
           <h1 className="hero-title">{profile.name}</h1>
           <p className="hero-subtitle">{profile.headline}</p>
 

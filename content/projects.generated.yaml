@@ -1,7 +1,7 @@
 projects:
   - slug: "bayesian-hypergraph-inference"
     title: "Bayesian Hypergraph Inference for Latent Disease Pathways"
-    theme: "Bayesian multimorbidity and health data"
+    theme: "Probabilistic modeling for multimorbidity in longitudinal health data"
     authorship_role: "first author"
     project_type: "project"
     featured_on_home: true
@@ -16,7 +16,7 @@ projects:
     figure_caption: "Bayesian hypergraph workflow linking patient covariates and disease outcomes to latent disease clusters and shared risk pathways."
   - slug: "connectivity-on-shape-regression"
     title: "Connectivity-on-Shape Regression in Preclinical Alzheimer's Disease"
-    theme: "Neuroimaging and imaging genetics"
+    theme: "Statistical neuroimaging and imaging genetics"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -32,7 +32,7 @@ projects:
     figure_caption: "COSR framework linking subcortical shape variation to functional connectivity in the A4 preclinical Alzheimer's disease cohort."
   - slug: "gradient-coupling"
     title: "Brain Functional-Structural Gradient Coupling"
-    theme: "Neuroimaging and imaging genetics"
+    theme: "Statistical neuroimaging and imaging genetics"
     authorship_role: "co-first author"
     project_type: "paper"
     featured_on_home: true
@@ -48,7 +48,7 @@ projects:
     figure_caption: "Overview of structural-functional gradient coupling construction from diffusion MRI, T1-weighted MRI, and resting-state functional MRI."
   - slug: "s-gmas"
     title: "S-GMAS"
-    theme: "Neuroimaging and imaging genetics"
+    theme: "Statistical neuroimaging and imaging genetics"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -64,7 +64,7 @@ projects:
     figure_caption: "Functional mediation diagram relating significant SNPs, corpus callosum shape mediators, clinical confounders, and neurocognitive outcomes."
   - slug: "bayesian-single-index-quantile-regression"
     title: "Bayesian Monotone Single-Index Quantile Regression"
-    theme: "Functional and shape modeling"
+    theme: "Functional, shape, and distributional modeling"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: true
@@ -80,7 +80,7 @@ projects:
     figure_caption: "Averaged ERP waveforms for losing and winning door games, highlighting the reward-positivity interval used in the analysis."
   - slug: "distribution-on-scalar-single-index-quantile-regression"
     title: "DSQRM for Tumor Heterogeneity"
-    theme: "Functional and shape modeling"
+    theme: "Functional, shape, and distributional modeling"
     authorship_role: "co-first author"
     project_type: "software"
     featured_on_home: false
@@ -96,7 +96,7 @@ projects:
     figure_caption: "DSQRM workflow for distributional regression with heterogeneous imaging responses."
   - slug: "confounder-adjustment-single-index-function-on-scalar"
     title: "Confounder Adjustment in Single Index Function-on-Scalar Regression"
-    theme: "Functional and shape modeling"
+    theme: "Functional, shape, and distributional modeling"
     authorship_role: "first author"
     project_type: "paper"
     featured_on_home: false
@@ -112,7 +112,7 @@ projects:
     figure_caption: "Confounder-adjusted single-index function-on-scalar regression for heterogeneous imaging data."
   - slug: "lmfe"
     title: "LMFE for Partial Discharge Detection"
-    theme: "Applied machine learning systems"
+    theme: "Multiscale learning and signal modeling"
     authorship_role: "collaborative project"
     project_type: "paper"
     featured_on_home: false

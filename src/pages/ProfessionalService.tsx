@@ -127,8 +127,8 @@ export function ProfessionalService() {
   return (
     <div className="container page-stack">
       <SectionHeader
-        title="Professional Service"
-        intro="Selected reviewing, organizing, mentorship, and invited presentation activities."
+        title="Professional Activities"
+        intro="Selected peer-review, organizing, and scholarly presentation activities."
       />
 
       {sections.length > 0 || professionalService.reviewing.length > 0 ? (
@@ -141,9 +141,9 @@ export function ProfessionalService() {
       ) : (
         <article className="card">
           <div className="card-body">
-            <h2 className="card-title">Professional service content is being prepared</h2>
+            <h2 className="card-title">Professional activity content is being prepared</h2>
             <p className="card-text">
-              No public service entries are available yet, but this page is wired to
+              No public professional activity entries are available yet, but this page is wired to
               `content/professional_service.generated.yaml`.
             </p>
           </div>
