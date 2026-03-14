@@ -49,8 +49,7 @@ export function Home() {
   const externalLinks = [
     { label: 'Google Scholar', href: profile.google_scholar_url },
     { label: 'GitHub', href: profile.github_url },
-    { label: 'ORCID', href: profile.orcid_url },
-    { label: 'Lab website', href: profile.department_url }
+    { label: 'ORCID', href: profile.orcid_url }
   ].filter((item) => Boolean(item.href))
 
   return (

@@ -6,8 +6,7 @@ const contactItems = [
   { label: 'Personal website', value: 'website_url' as const, kind: 'link' as const },
   { label: 'Google Scholar', value: 'google_scholar_url' as const, kind: 'link' as const },
   { label: 'ORCID', value: 'orcid_url' as const, kind: 'link' as const },
-  { label: 'LinkedIn', value: 'linkedin_url' as const, kind: 'link' as const },
-  { label: 'Lab website', value: 'department_url' as const, kind: 'link' as const }
+  { label: 'LinkedIn', value: 'linkedin_url' as const, kind: 'link' as const }
 ]
 
 export function Contact() {
