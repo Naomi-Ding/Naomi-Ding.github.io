@@ -135,6 +135,7 @@ code {
   font-size: 1rem;
   font-family: var(--font-serif);
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .brand-subtext {
@@ -268,7 +269,7 @@ code {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 1fr);
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -279,10 +280,13 @@ code {
 
 .hero-title {
   margin: 0;
-  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-size: clamp(1.9rem, 4vw, 3.45rem);
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   font-family: var(--font-serif);
+  white-space: nowrap;
+  text-wrap: nowrap;
+  hyphens: none;
 }
 
 .hero-subtitle {
@@ -1053,6 +1057,12 @@ button.button {
   min-height: 78vh;
   border: 0;
   background: white;
+}
+
+@media (max-width: 1080px) {
+  .hero-title {
+    font-size: clamp(1.7rem, 3.4vw, 2.9rem);
+  }
 }
 
 @media (max-width: 900px) {
