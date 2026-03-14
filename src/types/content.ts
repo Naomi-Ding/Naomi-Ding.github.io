@@ -19,6 +19,8 @@ export interface Profile {
   alternate_names?: string[]
   headline: string
   location?: string
+  portrait_image?: string
+  portrait_alt?: string
   email?: string
   website_url?: string
   github_url?: string

@@ -86,6 +86,8 @@ function normalizeProfile(): Profile {
     alternate_names: asStringArray(parsed.alternate_names),
     headline: asTrimmedString(parsed.headline, 'Academic website in preparation'),
     location: asTrimmedString(parsed.location),
+    portrait_image: asTrimmedString((parsed as Record<string, unknown>).portrait_image),
+    portrait_alt: asTrimmedString((parsed as Record<string, unknown>).portrait_alt),
     email: asTrimmedString(parsed.email),
     website_url: asTrimmedString(parsed.website_url),
     github_url: asTrimmedString(parsed.github_url),

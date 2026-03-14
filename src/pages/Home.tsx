@@ -75,45 +75,28 @@ export function Home() {
               </a>
             ) : null}
           </div>
+
+          {externalLinks.length > 0 ? (
+            <div className="hero-inline-links" aria-label="Selected links">
+              {externalLinks.map((item) => (
+                <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className="hero-inline-link">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         <aside className="hero-panel card">
-          <div className="card-body stack">
-            <div>
-              <p className="card-kicker">Current appointment</p>
-              <h2 className="card-title">Department of Biostatistics, Yale University</h2>
-              <p className="muted-text">Postdoctoral Associate since July 2024</p>
-              {profile.location ? <p className="muted-text">Based in {profile.location}</p> : null}
+          {profile.portrait_image ? (
+            <div className="hero-portrait-frame">
+              <img
+                src={withBase(profile.portrait_image)}
+                alt={profile.portrait_alt || `Portrait of ${profile.name}`}
+                className="hero-portrait-image"
+              />
             </div>
-
-            {profile.research_interests.length > 0 ? (
-              <div>
-                <h2 className="card-title">Research interests</h2>
-                <ul className="tag-list">
-                  {profile.research_interests.map((item) => (
-                    <li key={item} className="tag-pill">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-
-            {externalLinks.length > 0 ? (
-              <div>
-                <h2 className="card-title">Selected links</h2>
-                <ul className="link-list">
-                  {externalLinks.map((item) => (
-                    <li key={item.label}>
-                      <a href={item.href} target="_blank" rel="noreferrer">
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+          ) : null}
         </aside>
       </section>
 
